@@ -129,9 +129,17 @@ If logged in with Facebook, Pulse crawls the users news feed and finds articles 
 
 \subsection{Summly}
 
-Summly is a gesture oriented news aggregating application which was developed by Nick D'Aloisio in 2011. The main idea was not to personalize the news reading experience, but rather create intelligent summaries of the most trending news, by using advanced text analysis and natural language processing methods. Summly was sold to Yahoo for reported £18 million GBP in March 2013\cite{summly_sold_yahoo}, and was shortly after removed from the App Store, for Yahoo to use the summary technology elsewhere\cite{summly_closed}.
+Summly is a gesture oriented news aggregating application which was developed by Nick D'Aloisio in 2011. The main idea was not to personalize the news reading experience, but rather create intelligent summaries of the most trending news, by using advanced text analysis and natural language processing methods\cite{summly_idea}. Summly was sold to Yahoo for reported £18 million GBP in March 2013\cite{summly_sold_yahoo}, and was shortly after removed from the App Store, for Yahoo to use the summary technology elsewhere\cite{summly_closed}.
 
 \subsubsection{User Interface Design}
+
+The front page in the Summly application shows the user how many unread Summlys\footnote{A Summly is a summarized version of a website or article.} (s)he has. It also shows the title, publisher and category of a trending article as of now. The title of the trending article is also a button, and when clicked, the application opens the single article view showing the clicked article. 
+
+The single article view (see the second image in figure \ref{screenshots_summly}) shows the article's image, title, publisher, time since it was published, number of words in the full Summly and the short Summly. With horizontal swipes the user can navigate between different articles in the current showing category. To read the full Summly the user can double tap the anywhere on the screen. In the full summary the user can choose to close the full Summly by double tapping the screen again or open the article at the publisher's website in a web view by tapping a blue right arrow button.
+
+In the single article view the user can also access the full article at the publisher's site by swiping down. To share or save this article, the user simply holds down one finger and a share view is presented where the user can save the article, or share it on Twitter, Facebook or mail.
+
+By swiping up in the single article view the category view (first image in figure \ref{screenshots_summly}) is shown. Here the user can choose to read from another category or add new categories, entities or topics by clicking the plus button at the bottom of the category screen. The screen where categories are managed are shown in the last image in figure \ref{screenshots_summly}.
 
 \begin{figure}[!htbp]
 \centering
@@ -141,6 +149,12 @@ Summly is a gesture oriented news aggregating application which was developed by
 \end{figure}
 
 \subsubsection{Technology}
+
+Summly has the ability to add custom categories, topics and entities as well as giving the user the latest and most trending news within these categories, topics and entities. Summly does not focus on personalization or recommendation, but rather on creating intelligent summaries of news articles, as earlier mentioned.
+
+Summly states when talking about how the text summarization is done: "instead of a robotic, linear algorithm, Summly uses a genetic algorithm to mimic how a human actually thinks, using organic metrics to extract the most critical components"\cite{summly_launch_video}. Summly uses an advanced algorithm based on machine learning and NLP to create their 400 character long summaries of the news articles\cite{summly_technology}.
+
+
 
 
 \subsection{News360}
