@@ -229,10 +229,16 @@ Similar to Summly, Circa does not focus on the personalization and recommendatio
 While Summly uses NLP and machine learning to do so, Circa has an own editorial staff, working solely with creating summaries for the news reader, in terms of bullet points, facts, quotes, photos, maps and related stories\cite{circa_about}.
 
 \subsection{Wavii}
-Wavii is something in between a news application and a social network application, and has been called "A Facebook for Topics"\cite{wavii_facebook_for_topics}. The main idea is that a user can follow topics and interact with these topics, rather than friends on Facebook, for instance. The user gets a news feed of interesting topics, where the sources of these news feed instances can be news sites, Twitter, blogs, etc., and the user can share his/hers reaction to the story, comment and share with friends.
-
+Wavii is something in between a news application and a social network application, and has been called "A Facebook for Topics"\cite{wavii_facebook_for_topics}. The main idea is that a user can follow topics and interact with these topics, rather than friends on Facebook, for instance. The user gets a news feed of interesting topics, where the sources of these news feed instances can be news sites, Twitter, blogs, etc., and the user can share his/hers reaction to the story, comment and share with friends.	
 
 \subsubsection{User Interface Design}
+To be able to start using Wavii, the user has to login, either using Twitter, Facebook or by creating a Wavii account with an email address. After login the user is prompted with a screen to start following topics.
+
+The start screen is a news feed showing followed topics and is an aggregated endless feed of all topics that is followed (see first image in figure \ref{screenshots_wavii}). Each story in the feed is an event and includes one or more topics that is followed. The story can be interacted with in several different ways, like share reaction in terms of different predefined facial expressions shown as simple drawings, commenting, sharing on social networks and poll questions.
+
+The top bar is scrollable in a horizontal direction, and here the user can change the main category of the news feed, in terms of categories extracted from the different topics followed. By hitting the menu button in the top left corner, the navigation view, shown in last image in figure \ref{screenshots_wavii}, is revealed. Here the user can navigate to the different main views of the application, like the main feed, user profile, discover new topics, search for friends and settings.
+
+When a story in the main feed is tapped, the single story view, shown in the second image in figure \ref{screenshots_wavii}, is shown. In the single story view the news story, twitter feed, or whatever the source of this event is, is shown. The user also has the ability to read a part of the source that caused the event, or open the whole source in a web view. The single story view also shows which stories or events that are concerning the showing event, in terms of clickable boxes, and lets the user follow that story or event by simply clicking it. At the bottom of the single story view, a dozen of related topics and events are shown, these also as boxes, and by clicking these the user can easily start following it.
 
 \begin{figure}[!htbp]
 \centering
@@ -242,7 +248,9 @@ Wavii is something in between a news application and a social network applicatio
 \end{figure}
 
 \subsubsection{Technology}
+To help you find interesting topics, Wavii can crawl the user's social feeds, and propose a set of topics to follow, based on what the user and the friends of the user has interacted with. The user can also search for topics to follow.
 
+To extract topics and events, Wavii uses a proprietary algorithm for NLP\cite{wavii_proprietary_algorithm}. Oren Etzioni, a professor in computer science and a specialist in the field of AI, at the University of Washington, who also is an advisor to Wavii, says that Wavii uses a state-of-the-art extraction algorithm to gather topics and events\cite{wavii_facebook_for_topics}.
 
 \subsection{Prismatic}
 
