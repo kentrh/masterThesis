@@ -129,7 +129,7 @@ If logged in with Facebook, Pulse crawls the users news feed and finds articles 
 
 \subsection{Summly}
 
-Summly is a gesture oriented news aggregating application which was developed by Nick D'Aloisio in 2011. The main idea was not to personalize the news reading experience, but rather create intelligent summaries of the most trending news, by using advanced text analysis and natural language processing methods\cite{summly_idea}. Summly was sold to Yahoo for reported £18 million GBP in March 2013\cite{summly_sold_yahoo}, and was shortly after removed from the App Store, for Yahoo to use the summary technology elsewhere\cite{summly_closed}.
+Summly is a gesture oriented news aggregating application which was developed by Nick D'Aloisio in 2011. The main idea was not to personalize the news reading experience, but rather create intelligent summaries of the most trending news, by using advanced text analysis and natural language processing methods\cite{summly_idea}. Summly was sold to Yahoo! for reported £18 million GBP in March 2013\cite{summly_sold_yahoo}, and was shortly after removed from the App Store, for Yahoo! to use the summary technology elsewhere\cite{summly_closed}. On April 22nd, Yahoo! released their new news application using the NLP algorithms and machine learning that previously was used in Summly\cite{yahoo_news_app_release}
 
 \subsubsection{User Interface Design}
 
@@ -253,8 +253,20 @@ To help you find interesting topics, Wavii can crawl the user's social feeds, an
 To extract topics and events, Wavii uses a proprietary algorithm for NLP\cite{wavii_proprietary_algorithm}. Oren Etzioni, a professor in computer science and a specialist in the field of AI, at the University of Washington, who also is an advisor to Wavii, says that Wavii uses a state-of-the-art extraction algorithm to gather topics and events\cite{wavii_facebook_for_topics}.
 
 \subsection{Prismatic}
+Prismatic is a news recommendation application that gives the user a personalized news feed based on social network aggregation and applies machine learning algorithms to filter content based on the user's interests\cite{prismatic_wikipedia}.
 
 \subsubsection{User Interface Design}
+To get started with Prismatic, the user has to login, either with Facebook, Google+ or Twitter. The user can also register a "Stealth"-account, as Prismatic calls it, if the user do not want to connect the application with their social account.
+
+When logged in for the first time the user starts a tour of the application to add interests and get to know how to use the application. The interests suggestions are based on localization and the user's social network feeds and interactions. The user can also search for topics to be included in the news feed.
+
+The news feed is shown in the first image in figure \ref{screenshots_prismatic}, and this is also the main screen of the application. Here the user is greeted with an endless feed of news stories based on the user's interests. Each story can have a title, an image, the source of the story, a lead text and zero or more topics or entities that is connected to the story.
+
+When a story is tapped the story is presented in the single news view, as shown in the second image in figure \ref{screenshots_prismatic}. Here the user can read the whole story in a vertical scroll view, get a list of related stories by tapping the text that states how many related stories there are and open the sources for the story in a web view by tapping the keyword associated with this source. 
+
+A press and hold gesture wherever in the application will bring up three action buttons to interact with the selected news story. The three buttons are save the story for later reading, add the story to the favorites list, and share the story. If the share button is clicked, it will bring up a new screen, where the user can share the story by email, Facebook or Twitter.
+
+By swiping left anywhere in the application, the category selection/settings view is brought up, shown in the last image in figure \ref{screenshots_prismatic}. Here the user can search for new topics or sources, deselect already chosen topics or sources, access the user's activity in terms of articles that are shared, saved, read and starred, and get suggestions for new stories, topics and sources. 
 
 \begin{figure}[!htbp]
 \centering
@@ -264,11 +276,28 @@ To extract topics and events, Wavii uses a proprietary algorithm for NLP\cite{wa
 \end{figure}
 
 \subsubsection{Technology}
+Instead of just crawling the user's social feeds for news that are shared or otherwise interacted with by the user or the user's friends, Prismatic categorizes and extracts keywords and entities from those news and finds news that are related to the news that are shared. Prismatic also tracks all the moves the users does to further build the user's interest profile. Each user profile has a set of stored interests with a weight of how important that interest is, illustrated in figure \ref{prismatic_interest_bubbles}. The user profiles are also updated in real time, and the news reading habits of the user will immediately affect the user's profile and which news that are recommended\cite{prismatic_how_it_works}.
 
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=130mm]{GFX/tech/prismaticInterestsBubbles.jpg}
+\caption{An illustration of how the prismatic user's interest profile are stored created by Aria Haghighi, co-founder of Prismatic.}
+\label{prismatic_interest_bubbles}
+\end{figure}
+
+To gather source for the news articles, Prismatic fetches millions of new news articles, blog posts, as well as other type of shared content, every day. All these sources are analyzed and processed with the use of machine learning and machine language training\cite{prismatic_how_it_works}.
 
 \subsection{Taptu}
+Taptu is a social news aggregating application with the slogan "DJ your News". This means that the user can create their own stream, combine or split streams or add your social network feeds as own streams inside the application. The application comes with a lot of predefined feeds from a lot of different sources, sorted by categories, but the user can also search for other streams as well. Taptu is available for iOS, Android and web.
 
 \subsubsection{User Interface Design}
+At the initial launch, Taptu offers to connect the application with Facebook, Twitter, LinkedIn or Twitter. Further the user can choose topics of interests to be included in the news feed. This also includes the user's social news feed, if the user chose to connect with one or more of the social networks.
+
+The main view which holds all the different feeds are shown in the first image in figure \ref{screenshots_taptu}. Each feed is horizontal scrollable to browse the different news stories in this feed. All the feeds are put in a vertical scrollable view to be able to access all the different feeds. At the bottom there are four buttons, namely "Streams", "StreamStudio", "Add Streams" and "Settings".
+
+The "Streams"-button shows the main view, just described. The "StreamStudio"-button shows a view where the user can manage the streams, like merge, split, rename, and remove sources from the stream. When the "Add Streams"-button is tapped, the view shown in the last image in figure \ref{screenshots_taptu} is presented. Here the user can add streams from one of the predefined categories by tapping the desired stream. The user can also search for other streams, or choose to login with Google Reader to include streams the user already has created in Google Reader. The last button shows the settings view where the user can change the layout of the application to his/her liking, in terms of fonts, text size, and background color. The user can also manage the social user profiles and feeds in this section.
+
+In the second image in figure \ref{screenshots_taptu}, the single article view is shown in a vertical scroll view. This view can consist of an image, title, author, and a text. At the bottom of the scroll view, Taptu also lists a couple of related topics which the user can chose to follow by tapping them. At the bottom of the page there are three buttons, the "Globe"-, "Star"-, and "Arrow"-buttons. The "Globe"-button opens the showing article in web view and shows the original article at the news provider's web page. The "Star"-button adds the article to a bookmarks stream for easy access later. The "Arrow"-button or "Action"-button, as it is often called, brings up a share screen where the user can share the story via numerous different channels, like email, Twitter, Facebook, and LinkedIn.
 
 \begin{figure}[!htbp]
 \centering
@@ -278,11 +307,32 @@ To extract topics and events, Wavii uses a proprietary algorithm for NLP\cite{wa
 \end{figure}
 
 \subsubsection{Technology}
+Taptu crawls social networks and retrieves the most shared news and posts, and lets users add own streams, in addition to the predefined streams, but Taptu does not have any advanced form of personalized recommendation. Their approach is more towards letting the users themselves choose what kind of sources to be displayed.
 
+It does however lets the user enable an option to the streams that is called "Taptu Magic", which follows the user's reading habits and shift articles more and more towards a subject that is more read than another\cite{taptu_magic}. For instance, if a user has a sports stream, and the user reads in general more basketball news than baseball news, "Taptu Magic" will start showing more basketball news and less baseball news in this stream.
 
 \subsection{Feedly}
+Feedly is a news aggregator application for iOS, Android and web. It is quite similar to Taptu in terms of functionality and purpose. Basically it is an advanced RSS-reading application.
 
 \subsubsection{User Interface Design}
+On the initial load, Feedly gives the user a quick introduction to the application and points the user in the direction of how to add feeds to the application. The application is highly usable without any login, but if the user wants to add own feeds and store these to later, a sign up with Google is required.
+
+To find new feeds, the user can search by keywords in the search field or by browsing the predefined topics, as shown in the last image in figure \ref{screenshots_feedly}. If the user has signed in, a source can be added to a feed, otherwise the previous feed that was shown will be replaced by the new feed that is selected.
+
+The main screen, shown in the first image in figure \ref{screenshots_feedly}, consists of a news feed contained in a vertical scroll view and a toolbar at the top. The toolbar has four buttons, the menu, title, add, and search button. 
+
+The menu button in the top left corner, shows a category selection and settings menu if the user is signed in. If not, the user is prompted to sign in via Google. When signed in the user can navigate to the different feeds, show all feeds as an aggregated feed, manage feeds, add new content, and change Feedly application settings.
+
+The title, in the top middle, also works as a button. When tapped it brings the user to the start of the feed again.
+
+The add button, lets the user add the current displaying feed to an already defined category or to a new one.
+
+The search button is located in the top right corner, and this opens the search view shown in the third image in figure \ref{screenshots_feedly}.
+
+When a single article is tapped in the main view, the single article view, as shown in the second image in figure \ref{screenshots_feedly}, is brought up. The single article view has a toolbar at the top with four buttons, and a vertical scroll view which shows whatever information is available from that feed, like title, number of likes, author, time since it was published, image, video, lead text, full article text. At the bottom of the scroll view there is a button to open the article at the publishers site in a web view.
+
+The four buttons at the top consists of a back button, which takes the user to the previous page, a custom button which is set by the user, a save button and a share button.
+The custom button can be, for instance, share to Twitter or open in Safari. The save button stores the article for accessing later or via another device. The share button opens a small view with numerous different buttons to share via different services, like Facebook, Google+, buffer, mail, and Instapaper.
 
 \begin{figure}[!htbp]
 \centering
@@ -292,24 +342,35 @@ To extract topics and events, Wavii uses a proprietary algorithm for NLP\cite{wa
 \end{figure}
 
 \subsubsection{Technology}
-
+As Feedly is more of an advanced RSS-reader, than a news recommendation application, and the focus of the application seems to be on creating a highly functional one, Feedly lets the user be in total control of the content, and does not offer any personalized recommendations based on social networks, or behavior. Feedly includes a search functionality that makes it very easy to add new feeds of choice and manage these feeds as the user see fit.
 
 \subsection{Comparing the Commercial Applications}
 
 \begin{center}
     \begin{tabular}{ | l | l | l | l | l | l | l | l | l | l | l |}
     \hline
-    Feature/Apps & Zite & Flipboard & Pulse & Summly & News360 & Circa & Wavii & Prismatic & Taptu & Feedly \\ \hline
+    Apps/Feature & News Sources & UI & Filtering & Sharing & Login \\ \hline
      
-    News Sources & N/A & N/A & N/A & N/A & N/A & N/A & N/A & N/A & N/A & N/A  \\ \hline
-     
-    Clear/Cluttered UI & N/A & N/A & N/A & N/A & N/A & N/A & N/A & N/A & N/A & N/A  \\ \hline
-     
-    Filtering & N/A & N/A & N/A & N/A & N/A & N/A & N/A & N/A & N/A & N/A  \\ \hline
+    Zite & N/A & N/A & N/A & N/A & N/A \\ \hline
 
-    Sharing & N/A & N/A & N/A & N/A & N/A & N/A & N/A & N/A & N/A & N/A  \\ \hline
+    Flipboard & N/A & N/A & N/A & N/A & N/A \\ \hline
 
-    Login & N/A & N/A & N/A & N/A & N/A & N/A & N/A & N/A & N/A & N/A  \\ \hline
+    Pulse & N/A & N/A & N/A & N/A & N/A \\ \hline
+
+    Summly & N/A & N/A & N/A & N/A & N/A \\ \hline
+
+    News360 & N/A & N/A & N/A & N/A & N/A \\ \hline
+
+    Circa & N/A & N/A & N/A & N/A & N/A \\ \hline
+
+    Wavii & N/A & N/A & N/A & N/A & N/A \\ \hline
+
+    Prismatic & N/A & N/A & N/A & N/A & N/A \\ \hline
+
+    Taptu & N/A & N/A & N/A & N/A & N/A \\ \hline
+
+    Feedly & N/A & N/A & N/A & N/A & N/A \\ \hline
+    
     \end{tabular}
 \end{center}
 
