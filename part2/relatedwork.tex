@@ -1,23 +1,107 @@
 \chapter{Related Work}
-In the ever expanding universe of information and the information overload that follows with it, the work on dealing with this overload never sleeps. This chapter will look at work done on handling information overload, especially considering news consumption, and news consumption on mobile devices. Topics like personalization, mobile news applications and news applications in general, designing mobile news applications and information aggregation will be discussed in more detail.
+In the ever expanding universe of accessible information and the information overload that follows with it, the work on dealing with this overload never sleeps. This chapter will look at work done on handling information overload, especially considering news consumption, and news consumption on mobile devices. Topics like personalization, mobile news applications and news applications in general, designing mobile news applications and information aggregation will be discussed in more detail.
 
 \section{Personalization on mobile devices}
-Mobile Recommender Systems by Francesco Ricci
+
+Information handling on regular desktop computers compared to mobile devices comes with different problems, possibilities and focus areas, considering for instance hardware capabilities and area of usage. 
+
+%Mobile devices often have slower network connections, smaller screens and are portable. Therefore the importance of getting the wanted information without too much browsing and network loading is more significant than on a desktop computer where browsing is an easier and cheaper task considering screen size and network connection.
+
+\cite{ricci2010mobile} lists several issues when creating recommender systems for mobile devices. For instance, the screen is a lot smaller than on desktop computer resulting in a smaller scrollable area which craves a higher workload from the user to display all the information, which makes the probability of the user seeing all the information smaller.
+
+Mobile devices often has limited input and interaction capabilities, which makes the effort of querying higher than on a regular keyboard.
+
+Mobile Internet browsing sessions are often shorter than on desktop computers, i.e. in the time span of a couple of minutes.
+
+Most web pages are not optimized for mobile devices which may result in a badly formatted displaying of the page.
+
+The cost of retrieving the data using mobile data through Edge or 3G are usually much higher than on personal Internet connections at home or office.
+
+\section{Personalized news}
+Personalized news and news applications taking advantage of personalization and recommendation technology is a trending topic now, considering three of the most popular mobile news application has been acquired by major software companies the last couple of months\cite{linkedin_acquires_pulse}\cite{google_acquired_wavii}\cite{summly_sold_yahoo}. Different news personalization approaches has also been researched and proposed the last years.
+
+\cite{billsus2000user} presents a system with focus on design, deployment and evaluation of a client/server-based framework for adaptive news access. Two news agents are described and deployed, one for the web and one on a PDA. The web version uses explicit feedback, and the PDA version uses implicit feedback, and the individual user models based on this feedback are induced by using machine learning algorithms. This feedback are meant to constantly keep the user profile up to date, and empirically build the user profile.
+
+The feedback are translated into short term and long term models, whereas the short term model can propose articles related to stories that has already been read, or not proposing articles similar to ones that already are read. A user can be interested in two different articles concerning a topic, but will most likely not be interested in two similar articles covering the same story although the topic is considered interesting. The long term model can update the user profile's interests with regard to categories the user finds interesting. If the user has read a lot of articles in one specific category over a longer period of time, a safe bet is that this is an interesting category, and can also be added to the user profile as an interesting category.
+
+The framework also proposes a hybrid model where the short term and long term models are combined in such a way that if the short term model cannot classify the feedback, the long term classification is used. 
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=130mm]{GFX/tech/adaptiveNewsAccessShortLongHybridTerm.png}
+\caption{The learning curves of the different models used in the adaptive news access framework.}
+\label{adaptive_news_access_learning_curves}
+\end{figure}
+
+Figure \ref{adaptive_news_access_learning_curves} shows the learning curves of the different models, where F1 is a function to measure the performance of the model. The figure shows that the hybrid approach outperforms both the short term and long term models when used individually. The results of the empirical study of this framework also suggests that effective personalization are obtainable without explicit feedback from the user.
 
 
 
-\section{Personalization regarding news apps}
-User modeling for adaptive news access by Daniel Billsus and Michael J. Pazzani
-\\\\
+
+\cite{rohr2008aggregated} proposes a framework for aggregating news articles, extracting the text, images, videos and TV news, turning it into a news event and displaying this in a lucid and clear user interface. The user is then able to select aggregated events based on semantic data, instead of just news articles.
+
+The user interface has three main views, the overview of the different events, the single event view and the tag cloud. The overview shows a list of different events, grouped by date and ordered by their descending score. The single event view show a particular event with corresponding related articles, images, videos and a timeline graph showing the evolution of the event over time in terms of number of resources published per day. The tag cloud is a collection of entities that the personalization engine has set as the user's current topics of interests. The bolder font, the more popular is that particular topic, and the users can remove and add topics as they wish.
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=130mm]{GFX/tech/aggregatedExpRating.png}
+\caption{Experience rating of the aggregated news system.}
+\label{aggregated_news_system_exp_rating}
+\end{figure}
+
+The UI allows an easy browsing experience as well as an in-depth understanding of an event. Figure \ref{aggregated_news_system_exp_rating} shows the user feedback of the proposed UI, and it shows that the majority of the users are satisfied with the system.
+
+
+
+From the middle of 2007 to late 2010, \cite{thurman2012future} performed a longitudinal study covering how personalization is done at 11 national news websites in the UK and US. Results from the three content surveys conducted in midst 2007, late 2009 and late 2010, showed that there were an increase of 69 per cent in the number of distinct adaptive news categories, from 70 to 118.
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=130mm]{GFX/tech/longitudinalStudyIncreaseInPersonalization.png}
+\caption{Growth of adaptive news at 11 national US and UK websites, 2007-2010.}
+\label{longitudinal_study_increase_in_personalization}
+\end{figure}
+
+Another finding was that passive personalization was decreasing while active personalization was increasing, and combined there still was an increase, as shown in figure \ref{longitudinal_study_increase_in_personalization}. It also states that news content providers needs to increase their use of personalization to target advertising better to each specific user, as static advertising is decreasing and dynamic advertising is increasing.
+
+\cite{li2011scene} proposes a scalable two-stage personalized news recommender system, SCENE. The system has two level of news representation, namely the topics relevant to the user preferences and the specific news articles. Further on, the system consists of three main components, clustering of news articles, construction of the user profile and recommendation.
+
+The clustering is done by using probabilistic language models. The user profile construction is done by extracting accessed news content, similar access patterns and preferred name entities from the user's browser log. The recommendation is done by selecting the most similar news group by looking at the clustered news articles and the user profile. Further, from this group, the recommendation is modeled as a "budgeted maximum coverage problem"\cite{khullera1999budgeted} and solved in a greedy way. To finish it up, properties like recency and popularity are taken into account.
+
+SCENE is demonstrated to support high quality recommendation result and an efficient clustering on newly published news articles, through extensive evaluation.
+
+
+\subsection{Filtering}
+
+\cite{wen2012hybrid} presents a personalized recommendation of news for Web using a hybrid method consisting of both content-based filtering and collaborative filtering. This model provides an autonomous tool that has the ability to minimize tedious and repetitive Web surfing for the user. A classification method, consisting of 5 steps, is used to auto-classify the Web pages. Models representing the user's degree of interest to a specific topic, the user interest model, and the user's preference to use a Web source, the preference model, are created using the Bayes theorem. Also a quantification of the time factor must be done, in addition to the preference model and user interest model, to be able to recommend the news item.
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=80mm]{GFX/tech/hybridApproachPrecisionRate.png}
+\caption{Precision rates showing the hybrid system versus the content-based system.}
+\label{hybrid_approach_precision_rate}
+\end{figure}
+
+The user's interests are then matched with the contents of the news to present the recommended news item suited for the user. In figure \ref{hybrid_approach_precision_rate} the precision rates of the hybrid model versus the same system with just the collaborative filtering model approach is showing. The figure shows that the hybrid model has a higher precision than the collaborative filtering model.
+
+
+\cite{liu2010personalized} also proposes a hybrid system where collaborative and content-based filtering are combined. A personalized news recommendation system for Google News is proposed. First a large-scale analysis of anonymized user click logs from Google News was conducted, to learn about the users' news interests. Further a Bayesian framework was developed to predict the users' current news interests based on activities of the current user and the trending topics based on the activity of all the users, found from the log analysis. At last, the content-based recommendation mechanism combined with an existing collaborative filtering mechanism is used to generate personalized news recommendations.
+
+The presented hybrid system is then tested with Google News and shows that the quality of the recommendations are improved and the number of visitors have increased, compared to when just the existing collaborative filtering mechanism was used. \\\\
+Google News Personalization: Scalable Online Collaborative Filtering
+
+\subsection{Mobile News}
 ePaper - the Personlized Mobile Newspaper by Shapira, Shoval, Meyer, Tractinsky, Mimran
 \\\\
-Aggregated Cross-Media News Visualization and Personalization by Cyril Rohr, Dian Tjondronegoro
+MONERS: A news recommender for the mobile web by H.J.Lee, Sung Joo Park
 \\\\
-The Future of Personalization at News Websites - Lessons from a longitudinal study by Neil Thurman, Steve Schiffers
 
-\subsection{Content Filtering}
 
-\subsection{Collaborative Filtering	}
+\cite{yeung2010proactive} presents an Analytic Hierarchy Process\cite{saaty1988analytic} model as a fundamental part of a proactive personalized mobile news recommendation system. The AHP model's function is to rate the relevance of news items and it supports both collaborative filtering and content-based filtering. To estimate the user's level of interest, a Bayesian Network\cite{jensen1996introduction} approach is used. BN was chose because of its good performance, such as low memory usage and fast computations, as well as it helps solving the data sparsity problem. Further to push the proactive information, a hybrid P2P\cite{shen2010handbook} system is applied.
+
+The proposed model is implemented as a mobile application in Java, named PPNews, supplying a just-in-time personalized news service. First the Bayesian Network is constructed, followed by the assignment of the weights and then the rank of each item is computed by applying the Analytic Hierarchy Process model.
+
+The application was tested on 10 research staff members and students, resulting in positive feedback, such as battery life lasting almost a whole day using the application, as well as the news pushed was generally matching the user's profile.
 
 \section{News consumption}
 How News Consumption is Shifting to the Personalized Social News Stream by Vadim Lavrusik
@@ -27,14 +111,14 @@ News Sync: Three Reasons to Visualize News Better by V.G. Vinod .. .. .
 \\\\
 Designing the future of the newspaper by Anna Benckert van de Boel
 
-\section{Commercial news recommendation applications}
-There are a lot of different commercial news recommendation applications, and because of them being commercial, getting the information on how the applications solves information overload and personalization, can be quite tricky. Some of them have a rather good explanation on how it is done, but most of them keep their cards close to the chest.
+\section{Commercial news recommender apps}
+There are a lot of different commercial news recommender apps, and since these are commercial systems, only a limited amount of information about their underlying technology has been published.
 
 Following are a short description of ten of the most popular and well known mobile news applications that are available at this time of writing, subjecting both the UI and how the recommendation is solved, if obtainable.
 
 
 \subsection{Zite}
-Zite is an intelligent magazine, which aims to guide the user towards discovering interesting things to read\cite{zite_appstore}, according to themselves.
+Zite is an intelligent magazine, which aims to guide the user towards discovering interesting things to read\cite{zite_appstore}.
 
 \subsubsection{User Interface Design}
 The Zite application meets the user with an infinite vertical scrollable view consisting of the top stories. Each news story is framed within a rectangular tile, whereas each tile consists of at least a title and the publisher of the article. The tile can also include tags, lead text, the time since it was published and the article's image (see the first image in figure \ref{screenshots_zite}).
@@ -75,7 +159,7 @@ When a category is tapped, news articles from this category can be browsed by sw
 
 When the article's preview is tapped, the user is presented with the article screen (see the middle picture in figure \ref{screenshots_flipboard}). Here the user can swipe up and down to read the whole story. If the article is retrieved from a social network, the user has the opportunity to interact with the social network the article is gathered from, like retweet and favorite for Twitter or "like" for Facebook. The user also has the ability to share the article via other services or choose to read it later by clicking the "out of the box" arrow on the top.
 
-Flipboard has a joyous, pretty and easy to use interface design, and has gotten a lot of attention because the app is considered to have a beautiful design\cite{flipboard_design} and a special flip-like animation that is used when scrolling the pages.\cite{flipboard_video}\cite{flipboard_animation}. Flipboard was also picked as "App of the Year" by Apple in 2010\cite{flipboard_app_of_the_year}.
+Flipboard has an easy to use interface design, and has gotten a lot of attention because the app is considered to have a beautiful design\cite{flipboard_design} and a special flip-like animation that is used when scrolling the pages.\cite{flipboard_video}\cite{flipboard_animation}. Flipboard was also picked as "App of the Year" by Apple in 2010\cite{flipboard_app_of_the_year}.
 
 \begin{figure}[!htbp]
 \centering
@@ -180,7 +264,7 @@ By tapping the button in the top left corner in the main view (see first image i
 \end{figure}
 
 \subsubsection{Technology}
-News360 uses a lot of advanced technology to be able to recommend news to the reader\cite{news360_technology}. The semantic analysis platform is created from seven years of natural language analysis and development experience. News360 uses a self made sophisticated linguistic analysis engine to perform tasks like entity extraction, fact extraction, text classification, dossier generation and clusterization.
+News360 uses a lot of advanced technology to be able to recommend news to the reader\cite{news360_technology}. The semantic analysis platform is created from seven years of natural language analysis and development experience. News360 uses a self made sophisticated linguistic analysis engine to perform tasks like entity extraction, fact extraction, text classification, dossier generation and clustering.
 
 Further this engine is used in combination with a complex news-gathering system to analyze more than 100 000 articles a day in real time. From this analysis approximately 700 000 different people, locations, brands and companies are identified. Then the articles are tagged with locality and topics, and stored in clusters.
 
@@ -229,7 +313,7 @@ Similar to Summly, Circa does not focus on the personalization and recommendatio
 While Summly uses NLP and machine learning to do so, Circa has an own editorial staff, working solely with creating summaries for the news reader, in terms of bullet points, facts, quotes, photos, maps and related stories\cite{circa_about}.
 
 \subsection{Wavii}
-Wavii is something in between a news application and a social network application, and has been called "A Facebook for Topics"\cite{wavii_facebook_for_topics}. The main idea is that a user can follow topics and interact with these topics, rather than friends on Facebook, for instance. The user gets a news feed of interesting topics, where the sources of these news feed instances can be news sites, Twitter, blogs, etc., and the user can share his/hers reaction to the story, comment and share with friends.	
+Wavii is something in between a news application and a social network application, and has been called "A Facebook for Topics"\cite{wavii_facebook_for_topics}. The main idea is that a user can follow topics and interact with these topics, rather than friends on Facebook, for instance. The user gets a news feed of interesting topics, where the sources of these news feed instances can be news sites, Twitter, blogs, etc., and the user can share his/hers reaction to the story, comment and share with friends. In April 2013, Wavii was acquired by Google, and later removed from the app market for their NLP technology to be used in Google's own products\cite{google_acquired_wavii}.
 
 \subsubsection{User Interface Design}
 To be able to start using Wavii, the user has to login, either using Twitter, Facebook or by creating a Wavii account with an email address. After login the user is prompted with a screen to start following topics.
@@ -345,32 +429,59 @@ The custom button can be, for instance, share to Twitter or open in Safari. The 
 As Feedly is more of an advanced RSS-reader, than a news recommendation application, and the focus of the application seems to be on creating a highly functional one, Feedly lets the user be in total control of the content, and does not offer any personalized recommendations based on social networks, or behavior. Feedly includes a search functionality that makes it very easy to add new feeds of choice and manage these feeds as the user see fit.
 
 \subsection{Comparing the Commercial Applications}
+A lot of the commercial news recommender applications are quite alike on several levels. In table \ref{table_comparing_apps} the key features of the apps are extracted and sorted in to a more clean view. Using this table makes it easier to see where the apps differ and where they are similar. 
 
+Because of Google's acquirement of Wavii resulting in a removal from the app stores, some of the information for this application was not obtainable when comparing the different news apps.
+
+
+\begin{landscape}
+\centering
+\small
 \begin{center}
-    \begin{tabular}{ | l | l | l | l | l | l | l | l | l | l | l |}
-    \hline
-    Apps/Feature & News Sources & UI & Filtering & Sharing & Login \\ \hline
-     
-    Zite & N/A & N/A & N/A & N/A & N/A \\ \hline
+\begin{longtable}{ | p{2cm} | p{1.8cm} | p{1.8cm} | p{1.7cm} | p{1.7cm} | p{1.8cm} | p{1.7cm} | p{1.7cm} | p{1.8cm} | p{1.7cm} | p{1.7cm} |}
 
-    Flipboard & N/A & N/A & N/A & N/A & N/A \\ \hline
+\caption{Comparing the different commercial news recommender apps.} \label{table_comparing_apps}\\
+\hline
+\textit{\textbf{Feature / App}} & \textbf{Zite} & \textbf{Flipboard} & \textbf{Pulse} & \textbf{Summly} & \textbf{News360} & \textbf{Circa} & \textbf{Wavii} & \textbf{Prismatic} & \textbf{Taptu} & \textbf{Feedly} \\ \hline
+\endfirsthead
 
-    Pulse & N/A & N/A & N/A & N/A & N/A \\ \hline
+\multicolumn{11}{c}{\tablename\ \thetable\ -- \textit{Continued from previous page}} \\
 
-    Summly & N/A & N/A & N/A & N/A & N/A \\ \hline
+\hline
+\textit{\textbf{Feature / App}} & \textbf{Zite} & \textbf{Flipboard} & \textbf{Pulse} & \textbf{Summly} & \textbf{News360} & \textbf{Circa} & \textbf{Wavii} & \textbf{Prismatic} & \textbf{Taptu} & \textbf{Feedly} \\ \hline
+\endhead
 
-    News360 & N/A & N/A & N/A & N/A & N/A \\ \hline
+\hline \multicolumn{11}{c}{\textit{Continued on next page}} \\
+\endfoot
+\hline
+\endlastfoot
 
-    Circa & N/A & N/A & N/A & N/A & N/A \\ \hline
+ 
+\textbf{News sources} & News publishers, blogs & News publishers, blogs, social networks & News publishers, blogs, social networks & News publishers & News publishers & News publishers, blogs & News publishers, blogs, social networks & News publishers, blogs, social networks & News publishers, blogs, social networks & News publishers, blogs \\ \hline
 
-    Wavii & N/A & N/A & N/A & N/A & N/A \\ \hline
+\textit{\textbf{UI}} & & & & & & & & & & \\ \hline
 
-    Prismatic & N/A & N/A & N/A & N/A & N/A \\ \hline
+\textbf{Perspective} & RSS, web, summary & RSS, web, full article, interactions & RSS, web & short summary, long summary, web & RSS, full article, web & RSS, summary, web & Events, web & RSS, full article & RSS, web & RSS, web \\ \hline
 
-    Taptu & N/A & N/A & N/A & N/A & N/A \\ \hline
+\textbf{Login} & Voluntary & Voluntary, limited use & Yes & No & Voluntary & Voluntary & Yes & Yes & Voluntary & Voluntary, limited use \\ \hline
 
-    Feedly & N/A & N/A & N/A & N/A & N/A \\ \hline
-    
-    \end{tabular}
+\textbf{Input mode} & Gestures, buttons, text input & Gestures, buttons, text input & Gestures, buttons, text input & Gestures, buttons, text input & Gestures, buttons, text input & Gestures, buttons & Gestures, buttons, text input & Gestures, buttons, text input & Gestures, buttons, text input & Gestures, buttons, text input \\ \hline
+
+\textit{\textbf{Technology}} & & & & & & & & & & \\ \hline
+
+\textbf{User profiling} & Thumbs up/down, log analysis, stored topics, likes, social activity, blocked sources & Blocked authors, stored topics, social activity & Social activity, user location & N/A & Thumbs up/down, social activity, log analysis, saved articles & N/A & Social activity & Social activity, log analysis (in real time), stored topics, starred articles & N/A & N/A \\ \hline
+
+\textbf{Filtering} & Search, category, user profile, related stories, tags & Search, category, social behavior(cover stories) & Search, category, location & Search, category & Search, category, user profile, location, similar stories & Category & Search, category, social behavior & Search, category, user profile, related stories, tags, publishers & Search, category & Search, category \\ \hline
+
+\textbf{Trends (??)} & Discussed, shared & Trend analysis engine & N/A & N/A & Trend analysis engine & Editorial staff & N/A & Trend analysis engine & Most shared & N/A \\ \hline
+
+\textbf{Sharing} & Email, Twitter, Facebook, Google+, LinkedIn, SMS & Email, Twitter, Facebook, Google+, LinkedIn & Email, Twitter, Facebook & Email, Twitter, Facebook & Email, Twitter, Facebook, Google+ & Email, Twitter, Facebook, SMS & N/A & Email, Twitter, Facebook & Email, Twitter, Facebook, LinkedIn & Email, Twitter, Facebook, Google+, Buffer \\ \hline
+
+\textbf{Storing} & Evernote, Instapaper, Pocket & Instapaper, Pocket, Readability & Own storing & Own storing & Own storing, Evernote, Instapaper, Pocket & Own storing (follow story) & N/A & Own storing & Own storing, Instapaper, Pocket & Own storing, Instapaper, Pocket \\ \hline
+
+\end{longtable}
 \end{center}
+\end{landscape}
+
+
 
