@@ -87,14 +87,51 @@ The user's interests are then matched with the contents of the news to present t
 
 \cite{liu2010personalized} also proposes a hybrid system where collaborative and content-based filtering are combined. A personalized news recommendation system for Google News is proposed. First a large-scale analysis of anonymized user click logs from Google News was conducted, to learn about the users' news interests. Further a Bayesian framework was developed to predict the users' current news interests based on activities of the current user and the trending topics based on the activity of all the users, found from the log analysis. At last, the content-based recommendation mechanism combined with an existing collaborative filtering mechanism is used to generate personalized news recommendations.
 
-The presented hybrid system is then tested with Google News and shows that the quality of the recommendations are improved and the number of visitors have increased, compared to when just the existing collaborative filtering mechanism was used. \\\\
-Google News Personalization: Scalable Online Collaborative Filtering
+The presented hybrid system is then tested with Google News and shows that the quality of the recommendations are improved and the number of visitors have increased, compared to when just the existing collaborative filtering mechanism was used. 
+
+
+\cite{das2007google} proposes a collaborative filtering approach for generating personalized recommendations for a large scaled system, namely Google News. These recommendations are generated following three approaches: Probabilistic Latent Semantic Indexing\cite{hofmann1999probabilistic}, MinHash\cite{broder1997resemblance} clustering, and co-visitation\footnote{Co-visitation means that two different articles have been visited by the same user in a defined period of time\cite{jannachrecommender}.} count.
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=100mm]{GFX/tech/googleNewsPersonalizationMinHashPLSI.png}
+\caption{Live traffic click ratios for comparing PLSI and MinHash algorithms.}
+\label{google_news_personalization_minhash_plsi}
+\end{figure}
+
+The test of the system used on a large fraction of the Google News traffic conducted over a period of several days, demonstrated the efficiency and scalability of the system, and figure \ref{google_news_personalization_minhash_plsi} shows that the algorithms MinHash and PLSI combined almost always performs worse than when run separately.
+
 
 \subsection{Mobile News}
-ePaper - the Personlized Mobile Newspaper by Shapira, Shoval, Meyer, Tractinsky, Mimran
-\\\\
-MONERS: A news recommender for the mobile web by H.J.Lee, Sung Joo Park
-\\\\
+
+\cite{shapira2009epaper} describes a personalized mobile newspaper system called ePaper, a research prototype system which aggregates content from several different news providers. The news items are classified as concepts from a news domain ontology. Each subscribed user can then receive an electronic newspaper.
+
+Ontological content-based and collaborative filtering algorithms are applied to the user's profiles and preferences to personalize the content from the newspapers. To maintain the user's profile, the user's activity log in the application are analyzed to provide an implicit and dynamic update. The user can also access a news paper reading experience without any form of personalization through ePaper.
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=100mm]{GFX/screenshots/ePaper.png}
+\caption{The ePaper shown on two different devices.}
+\label{screenshots_ePaper}
+\end{figure}
+
+The ePaper is designed in a responsive way, meaning that it is adapted to the screen size and specifications of the device it runs on, see figure \ref{screenshots_ePaper}.
+
+
+
+\cite{lee2007moners} proposes a mobile web news recommendation system called MONERS. This system combines the nature of mobile web news content and service with the characteristics of users. 
+
+A recommendation of a news article from MONERS is computed in several steps. The weight of an article is calculated by the degree of importance and the recency of that specific article. Users are assigned into category segments, where these segments are formed through k-mean clustering\cite{teknomo2006k} using Euclidian distance measure\cite{danielsson1980euclidean}. The change in the user interests, measured as the weights of a category preference at the user's side, determines which category segments this user belongs to. The article preference of a user segment is also computed. These computations forms the recommendation that is delivered to the user. Figure \ref{moners_flow_chart} shows the flow of the mobile recommendation system.
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=100mm]{GFX/tech/monersFlowChart.png}
+\caption{The flow chart of the MONERS mobile news recommendation system.}
+\label{moners_flow_chart}
+\end{figure}
+
+MONERS was tested on real users of a mobile service operator and the result showed that the news accessed by category had more page hits, while the recommended news articles had a higher read ratio than articles sorted by recency or category.
+
 
 
 \cite{yeung2010proactive} presents an Analytic Hierarchy Process\cite{saaty1988analytic} model as a fundamental part of a proactive personalized mobile news recommendation system. The AHP model's function is to rate the relevance of news items and it supports both collaborative filtering and content-based filtering. To estimate the user's level of interest, a Bayesian Network\cite{jensen1996introduction} approach is used. BN was chose because of its good performance, such as low memory usage and fast computations, as well as it helps solving the data sparsity problem. Further to push the proactive information, a hybrid P2P\cite{shen2010handbook} system is applied.
