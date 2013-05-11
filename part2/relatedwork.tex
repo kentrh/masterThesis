@@ -141,18 +141,52 @@ The proposed model is implemented as a mobile application in Java, named PPNews,
 The application was tested on 10 research staff members and students, resulting in positive feedback, such as battery life lasting almost a whole day using the application, as well as the news pushed was generally matching the user's profile.
 
 \section{News consumption}
-How News Consumption is Shifting to the Personalized Social News Stream by Vadim Lavrusik
+\cite{mashable2010newsconsumption} talks about how news consumption are shifting from accessing news from regular news sources on the Internet towards being presented and accessing news articles in a personalized manner via social news streams. A study done by Pew Internet on a sample of 2259 American adults, shows that approximately three fourths of the people asked who access news online, are accessing the news via email or posts on social networking sites\cite{purcell2010understanding}.
 
-\section{UI Design mobile news applications}
-News Sync: Three Reasons to Visualize News Better by V.G. Vinod .. .. .
-\\\\
-Designing the future of the newspaper by Anna Benckert van de Boel
+National Public Radio\footnote{National Public Radio is a public radio network serving over 900 public radio stations throughout the US.} also conducted a survey regarding social news consumption\cite{npr2010facebooksurvery}. NPR asked their Facebook fans, which then summed up to about one million people, if people use social networks to access news and information. With over 40 000 answers to the survey, 74.6 per cent agreed that "Facebook is a major way for me to receive news and information from NPR".
+
+Although NPR's survey cannot say if the people who answered they survey is a good representative of the general public, it shows the same trend as the survey conducted by Pew Internet.
+
+\section{Designing news applications}
+
+\cite{vinod2010news} presents a news service called News Sync. The system was created focusing on three different scenarios of use, either separately or combined, namely news covering a topic, a location or within a specified time period. News Sync proposes a combination of NLP, machine learning, visualization and search to create a more "captivating and sticky news consumption experience".
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=140mm]{GFX/screenshots/newsSyncSearchWatergate.png}
+\caption{Screenshot from News Sync showing the search result for Watergate.}
+\label{news_sync_schematic_diagram}
+\end{figure}
+
+Figure \ref{news_sync_schematic_diagram} shows a screenshot of News Sync after a search for Watergate has been executed. The left-hand side consists of three main areas. A graph showing the distribution of articles containing the search phrase over the time specified, a tag cloud showing the keywords in the articles resulting from this search, and a tag cloud showing the locations concerning these articles. The higher concentration the bolder font, and all words in the tag clouds are clickable, for further browsing within this category or location.
+
+The main view is showing the clustering of news articles from the selected keyword. The user can choose another keyword on the left-hand side, and another cluster of news articles will be shown in the main view containing articles within this cluster.
+
+The user can share articles, summaries or stories to the most popular social networking sites, as well as saving the query for later access. All user activity are tracked and taken into account when building the personal profile, where this profile determines how the ranking and summarization of clusters are maintained to fit the user's profile.
+
+
+\cite{anna2011designing} presents a proposal on how to design an aggregating news application, called 247, on the Apple's iPad device with focus on combining the credibility of the editor, a social media layer and a fluent interaction experience. A main concern is how to move the conventional newspaper onto a digital medium, and how the digital medium can be used in everyday life to access news, either as an individual catching up on the latest news, or as a peripheral device presenting the latest headlines to whoever is looking at the device.
+
+It includes field work on how people are using the iPad as a device, and how, when and where people are accessing news throughout the day, resulting in a design allowing both individual use, and peripheral use (see figure \ref{future_of_news_individual_use} and \ref{future_of_news_peripheral_use}).
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=120mm]{GFX/screenshots/futureOfNewsPaperIndividualUse.png}
+\caption{Screenshot from 247 showing the individual UI design along with an example of individual usage.}
+\label{future_of_news_individual_use}
+\end{figure}
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=120mm]{GFX/screenshots/futureOfNewsPaperPeripheralUse.png}
+\caption{Screenshot from 247 showing the peripheral UI design along with an example of peripheral usage.}
+\label{future_of_news_peripheral_use}
+\end{figure}
 
 \section{Commercial news recommender apps}
 There are a lot of different commercial news recommender apps, and since these are commercial systems, only a limited amount of information about their underlying technology has been published.
 
 Following are a short description of ten of the most popular and well known mobile news applications that are available at this time of writing, subjecting both the UI and how the recommendation is solved, if obtainable.
-
 
 \subsection{Zite}
 Zite is an intelligent magazine, which aims to guide the user towards discovering interesting things to read\cite{zite_appstore}.
