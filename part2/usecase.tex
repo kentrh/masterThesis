@@ -47,15 +47,40 @@ At the top of the RSS view the title of the article is shown on top of the artic
 \end{figure}
 
 
+The full article view are quite similar to the RSS view, but in addition to all the information found in the RSS view, the full article view has access to the full article text, related articles and the possibility to show where the article resided on a map. The start of the full article text is shown in the lower part of the screen, and if the user wants to continue reading the the article text, a press and hold with one finger anywhere on the screen will bring up a new view showing only the article text in a full screen format. Here the user can read the whole story without minding any other information besides the article text. To close the article text view the user holds down one finger for a short amount of time again. If the article has any locations connected with it, a map pin is shown in the bottom right corner of the screen. By tapping this map pin or by double tapping the screen, a full screen map view (rear image in figure \ref{screenshots_nyhetene_full_article_and_map}) is presented showing on a map, all the locations that are connected with this article. To close the map view, the user simply double taps it again. The back-end system also delivers related articles to any article retrieved, if there exist any. These can be viewed by performing a horizontal swipe, similar to the RSS view. The related articles are shown in the same way as the full article view.
 
-
-
-
-
-
-
-
-
+As mentioned earlier the settings view are presented when performing a swipe up gesture in the start screen. The settings view shows how the user profile is stored in the back-end system, with regard to which criteria that are weighted most when retrieving news. These criteria are freshness and location, for instance. These values are set by the back-end system based on the user activity, and the user has the ability to override these settings and storing them, as well as wiping the user profile clean and start the learning from scratch. The user can also override the GPS location if the user wants news from a different place than where the device is currently residing.
 
 
 \subsection{Technology}
+The SMNRS, as shown in figure \ref{tech_news_app_architectural_view}, is quite complex and consists of several advanced technologies and APIs.
+
+\subsubsection{Back end}
+The back end starts by subscribing to different RSS feeds, consisting of different publishers and categories, provided by various news content providers. The preprocessing part consists of six steps:
+
+\begin{enumerate}
+	\item Extract RSS entries
+	\item Download HTML contents
+	\item Extract body text
+	\item Named Entity Recognition
+	\item Geo Code tagging
+	\item Index document
+\end{enumerate}
+
+Further these news article documents are stored in a search engine/document store service, using Apache Solr\footnote{Apache Solr stems from the Apache Lucene project and provides an open source enterprise search platform. More information at \url{http://lucene.apache.org/solr/}.}.
+
+To be able to get recommended news based on user activity and preferences, user profiles and user event logs are stored in a MongoDB\footnote{MongoDB is a type of database for storing structured data. More information at \url{http://www.mongodb.org/}.}. An Apache Hadoop\footnote{Apache Hadoop is a framework for distributed processing of large data sets. More information at \url{http://hadoop.apache.org/}.} batch job is running to constantly process the user events and updating the user profiles in the MongoDB.
+
+A middleware layer is put on top of the Solr and MongoDB systems using a REST API\footnote{A REST API is way of providing an interface to underlying technologies to make it easier to retrieve and store information without worrying about how the underlying technologies communicate.} to make querying news, storing event logs and updating user profiles an easier and more universal task.
+
+\subsubsection{Client}
+To retrieve the recommended news, the client queries the REST API for news, providing the back end with an unique user id and geolocation to get the news that best fits the user and the user's location, represented as JSON objects. If the user clicks a category, the category string is added to the query and if the users opens an article in the full article view, the client application queries the REST API for related news providing a news article id, in addition to the user id and geolocation.
+
+The client also tracks the user's activities, like if the user opened the full article view of an article, this counts as a positive event for this category or topic and will affect the user's profile. Which again will have an impact on the news delivered to this user. These events are pushed and stored in the MongoDB via the REST API every time the client makes a news query, and further processed by the Hadoop batch job, which will update the user profile according the events pushed.
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=150mm]{GFX/tech/newsAppArchitecture.png}
+\caption{Conceptual drawing showing the architectural view of the whole Smartmedia Mobile News Recommender System.}
+\label{tech_news_app_architectural_view}
+\end{figure}

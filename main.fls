@@ -123,9 +123,6 @@ INPUT /usr/local/texlive/2012/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
 INPUT GFX/figures/thesisFocusArea.png
 INPUT ./GFX/figures/thesisFocusArea.png
 INPUT ./GFX/figures/thesisFocusArea.png
-INPUT GFX/tech/newsAppArchitecture.png
-INPUT ./GFX/tech/newsAppArchitecture.png
-INPUT ./GFX/tech/newsAppArchitecture.png
 INPUT /usr/local/texlive/2012/texmf-dist/fonts/tfm/public/cm/cmtt10.tfm
 INPUT part2/part2.tex
 INPUT part2/part2.tex
@@ -241,6 +238,9 @@ INPUT ./GFX/clientApp/rssViewAndShare.png
 INPUT GFX/clientApp/swipeForSimilarAndMap.png
 INPUT ./GFX/clientApp/swipeForSimilarAndMap.png
 INPUT ./GFX/clientApp/swipeForSimilarAndMap.png
+INPUT GFX/tech/newsAppArchitecture.png
+INPUT ./GFX/tech/newsAppArchitecture.png
+INPUT ./GFX/tech/newsAppArchitecture.png
 INPUT part3/part3.tex
 INPUT part3/part3.tex
 INPUT part3/perspectives.tex
