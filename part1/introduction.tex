@@ -1,9 +1,17 @@
 \chapter{Introduction}
-
+From the rise of the smart mobile era, starting around the mid 2000s, content consumption has shifted more and more towards the mobile scene, as the mobile devices has gotten more powerful, with larger screens and Internet access has gotten more ubiquitous. Information that previously was only accessible in paper form, i.e. books and newspapers, also has had a shifting trend towards the digital platform. With all this content and information available to almost everybody and almost everywhere in the world, the importance of being able to filter it and getting only the content that is relevant or interesting to a single user is a highly relevant and an important area of research. Just as important to be able to filter this information, is how to present the filtered information. With the small screens that follows with the mobile devices, compared to for instance desktop computers, how the information is presented, is crucial to a mobile application's success.
 
 \section{Problem}
+This thesis will focus on a combination of these three main topics, namely a mobile application, with the use of a recommender system to help filter the content, narrowed down to a news application's perspective, as shown in figure \ref{thesis_focus_area}.
 
-State that it's not in my assignment to evaluate recommendation techniques, but that I use a backend system for that part. My task is the client part in figure \ref{tech_news_app_architectural_view}
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=60mm]{GFX/figures/thesisFocusArea.png}
+\caption{The main focus area of the thesis.}
+\label{thesis_focus_area}
+\end{figure}
+
+This will result in a mobile news recommender application, developed for iOS on the iPhone, where the main focus will be on the user interface part of the system, and how this part of the application can be created. Figure \ref{tech_news_app_architectural_view} shows how the iPhone application to be developed in association with this thesis, links to the other parts of the system as a whole. This thesis does not have as a goal to evaluate or develop recommendation and personalization techniques, but focuses on the client part of the whole news recommendation system.
 
 \begin{figure}[!htbp]
 \centering
@@ -12,48 +20,65 @@ State that it's not in my assignment to evaluate recommendation techniques, but 
 \label{tech_news_app_architectural_view}
 \end{figure}
 
-Explain briefly how my problem evolves around an intersection of a mobile application, news application and a recommender system.
-
 \subsection{Research questions}
+Following are the research questions that this thesis aims to give answers to.
 
-GIVE A PERSONAL INTERPRETATION ON THE RESEARCH QUESTIONS
+\subsubsection{What are possible perspectives on news in a personalized news recommender system and how are they related?}
 
-- What are possible perspectives on news in a personalized news recommender system and how are they related? (logical structure of news: articles, maps, entities, categories,...)  ... should come up with a model to show how different aspects of news are related.
+In which way is it possible to represent news articles and how can one view representing a news article be translated to another view. What type of information is represented in each of the different views and can one view be misleading or suffer from a lack of information compared to another view, if presented a part from the other perspectives?
 
-(Create some figure to show how they are related, like a pin on a map with title corresponds to the name of the place in the title for instance. Or an entity like Madrugada in an entity view, can correspond to a word (Madrugada) in a text about Sivert Høyem)
-\\\\
-- What are particular features of mobile user interfaces that affect the mobile news user experience? (platform stuff)
+Different perspectives to present news via will be presented, as well as how they are related and corresponds with each other. 
+%logical structure of news: articles, maps, entities, categories,...)  ... should come up with a model to show how different aspects of news are related.
 
-(Touch gestures plays a significant role when designing a mobile app, save space wherever you can -> gestures instead of buttons, make more screens with less info instead of cluttering the screen. Only one domain per screen, type of. E.g. in this case separate map and article view.
+%(Create some figure to show how they are related, like a pin on a map with title corresponds to the name of the place in the title for instance. Or an entity like Madrugada in an entity view, can correspond to a word (Madrugada) in a text about Sivert Høyem)
 
-Unable to hover with the mouse
-)
-\\\\
-- What are relevant perspectives on news in current mobile news apps? (what do they address, and how do they implement it)
 
-(Most apps combine categories and entities. Often the user can choose from different high level ordered categories like technology or economics, but can search for other categories and entities as well, and add these with the same hierarchical significance as the other news categories. Topics/entities can be flowers, BMW, Chelsea, cycling, etc.. Anything the user finds interesting.)
-\\\\
-- How can these perspective be supported on a mobile platform to increase user experience and provide maximum flexibility? (gestures vs. input, flow between related perspectives like article \& map location, etc.)  .... here we should show how we translate the model above into particular user interface features.
-\\\\
--  User case: Our news recommender system
+\subsubsection{What are particular features of mobile user interfaces that affect the mobile news user experience?}
 
-\section{Research Approach}
-overall research approach
+In which way are mobile user interfaces different from, for instance, desktop computer user interfaces? What considerations has to be done when designing a mobile user interface and how do the interaction methods differ from one another?
 
-\subsection{Introduction}
+The most relevant differences between a mobile user interface and other interfaces where news can be accessed will be presented. Also how these differences may have an impact on the news reading abilities on a mobile device will be discussed.
+%(platform stuff)
 
-- short text describing the different research strategies
-\\\\
+%(Touch gestures plays a significant role when designing a mobile app, save space wherever you can -> gestures instead of buttons, make more screens with less info instead of cluttering the screen. Only one domain per screen, type of. E.g. in this case separate map and article view.
 
-\subsection{Methodology}
+%Unable to hover with the mouse
 
-- What kind of methodology will I be using (Design-science ?)
 
-\subsection{Overall Research Phases}
+\subsubsection{What are relevant perspectives on news in current mobile news apps?}
 
-- Describe the different phases in my research
-\\\\
-- Typisk: check out similar projects/articles -> relate to my project -> implement an demo application -> evaluate the whole shabang!
+Subjecting a handful of already developed mobile news applications, how is the news presented? Which types of perspectives are used in the different apps? Are different perspectives used in the same app, if so, how are linked together and what do they represent, in terms of information?
+
+Approximately a dozen of commercial and non-commercial mobile news application will be targeted and the different perspectives in each application and how they are related in the application will be presented.
+
+%(what do they address, and how do they implement it)
+
+%(Most apps combine categories and entities. Often the user can choose from different high level ordered categories like technology or economics, but can search for other categories and entities as well, and add these with the same hierarchical significance as the other news categories. Topics/entities can be flowers, BMW, Chelsea, cycling, etc.. Anything the user finds interesting.)
+
+
+\subsubsection{How can these perspectives be supported on a mobile platform to increase user experience and provide maximum flexibility?}
+
+What is the main goal for the different perspectives and are they successful in terms of presenting the information that the user wants? What do they convey and is this perspective contributing to a better user experience? Do these perspective depend on other technologies or APIs found on the mobile device, like GPS or gyroscope?
+
+The different perspectives presented will be evaluated in terms of functionality and how they can contribute to improving the news reading experience, or on the other hand, create more confusion than supplying the user with additional useful information.
+%(gestures vs. input, flow between related perspectives like article \& map location, etc.)  .... here we should show how we translate the model above into particular user interface features.
+
+
+\subsubsection{The Smartmedia Mobile News Recommender Use Case}
+%-  User case: Our news recommender system
+As a use case for this thesis, the Smartmedia Mobile News Recommender system\footnote{The Smartmedia Mobile News Recommender system's project web site can be found at \url{http://smartmedia.idi.ntnu.no}.} will be applied. A mobile application will be developed on top of the existing back end, as shown in figure \ref{tech_news_app_architectural_view}, limited to the iOS platform, for the sake of simplicity.
+
+Further the use case will be compared to existing mobile news applications in terms of available perspectives and functionality.
+
+\section{Approach (Trenger litt hjelp her)}
+Following are the main approaches to answer the research questions.
+
+\begin{enumerate}
+	\item Select a particular use case.
+	\item Identify the state of commercial and non-commercial contributions.
+	\item Describe and evaluate the use case compared to the other contributions.
+\end{enumerate}
+
 
 \section{Results}
 
