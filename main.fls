@@ -56,6 +56,16 @@ INPUT /usr/local/texlive/2012/texmf-dist/tex/generic/ifxetex/ifxetex.sty
 INPUT /usr/local/texlive/2012/texmf-dist/tex/generic/ifxetex/ifxetex.sty
 INPUT /usr/local/texlive/2012/texmf-dist/tex/latex/tools/longtable.sty
 INPUT /usr/local/texlive/2012/texmf-dist/tex/latex/tools/longtable.sty
+INPUT /usr/local/texlive/2012/texmf-dist/tex/latex/base/inputenc.sty
+INPUT /usr/local/texlive/2012/texmf-dist/tex/latex/base/inputenc.sty
+INPUT /usr/local/texlive/2012/texmf-dist/tex/latex/base/utf8.def
+INPUT /usr/local/texlive/2012/texmf-dist/tex/latex/base/utf8.def
+INPUT /usr/local/texlive/2012/texmf-dist/tex/latex/base/t1enc.dfu
+INPUT /usr/local/texlive/2012/texmf-dist/tex/latex/base/t1enc.dfu
+INPUT /usr/local/texlive/2012/texmf-dist/tex/latex/base/ot1enc.dfu
+INPUT /usr/local/texlive/2012/texmf-dist/tex/latex/base/ot1enc.dfu
+INPUT /usr/local/texlive/2012/texmf-dist/tex/latex/base/omsenc.dfu
+INPUT /usr/local/texlive/2012/texmf-dist/tex/latex/base/omsenc.dfu
 INPUT main.aux
 INPUT main.aux
 OUTPUT main.aux
@@ -195,6 +205,7 @@ INPUT ./GFX/screenshots/flipboard.png
 INPUT GFX/screenshots/pulse.png
 INPUT ./GFX/screenshots/pulse.png
 INPUT ./GFX/screenshots/pulse.png
+INPUT /usr/local/texlive/2012/texmf-dist/fonts/tfm/public/cm/cmu10.tfm
 INPUT GFX/screenshots/summly.png
 INPUT ./GFX/screenshots/summly.png
 INPUT ./GFX/screenshots/summly.png
@@ -275,3 +286,4 @@ INPUT /usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.p
 INPUT /usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb
 INPUT /usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb
 INPUT /usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb
+INPUT /usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmu10.pfb
