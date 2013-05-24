@@ -1,18 +1,34 @@
 \chapter{Mobile features}
-Having a news application in mind, following are a description of mobile features that in one way or another has an impact on the creation of the mobile application and the mobile news user experience.
+
+Having a news application in mind, following are a description the most important aspects when creating a mobile application and how it is different from traditional desktop applications, considering the various features and abilities that are involved.
 
 \section{Display}
-The mobile displays are smaller than regular PC screens and the mobile user interfaces needs another approach than the PC UIs when designing them. 
+The mobile displays are smaller than regular PC screens and the mobile user interfaces needs another approach than the PC UIs when designing them. News read on a desktop computer is mainly accessed through a web browser by visiting the content publishers' own websites or by other news aggregating services available on the Internet. Most news related native desktop applications available today are just RSS readers, which links to a web page, and the news article is still accessed via a web browser. This means that the designing of the news providing application is OS independent. Also most PC screens are large enough to display a web page with its content, not having to worry about the different screen sizes and adapting the content to every possible size, as when designing for mobile devices.
+
+As of now, the iPhone only has two different screen sizes, where only the length of the screen differ, making the design process of adapting the application to both devices less comprehensive compared to other mobile devices. For instance, applications developed for mobile phones running on Android or Windows Phone, has a lot of different resolutions and screens sizes to take into account when designing the UI for the application.
+
+Given that all information that should be displayed in a news web page fits inside a PC screen, it will most likely not fit inside a mobile screen. The design approach on a mobile UI will probably result in dividing the information up in smaller pieces and views, and some navigation logic between them has to be added.
 
 \section{Interaction}
+The interaction pattern for PCs and smart mobile devices are quite different. PCs are usually controlled with a keyboard and a mouse, while smart phones are normally controlled through a touch based screen.
 
+On systems where a mouse is used, which accounts for most computers, the possibility of bringing up information when the mouse hovers over an element is widely used, but on mobile user interfaces with touch screens, the hover possibility is not an option, ergo another way of showing the same information has to be created.
+
+On the other hand a touch device has a lot of possibilities that are not available or not as intuitive on a standard desktop computer. With a touch device, a user interacts directly with the element on a screen, compared to using a mouse. Gestures like dragging, pinching, swiping etc. can make a mobile user interface intuitive and easy to use, and more similar to gestures people do with actual objects. For instance, a swipe to the side to flip a page, similar to flipping a page in a real newspaper, is a more authentic experience to the real life than moving the mouse cursor to a page, clicking the mouse button and holding it down, and then drag it to flip the page.
+
+Also a lot of mobile touch devices can register a lot of different event triggers, like touches, gestures, and movements, to mention a few. It is possible to differentiate between a touch with two fingers versus a touch with four fingers, a swipe with one finger versus a swipe with three fingers, and these gestures can also be combined. For instance, a user can touch and hold a box on the screen with two fingers for one second to trigger an edit mode, and further move this box around by starting to swipe two fingers while still holding on to the box, to position it wherever the user prefers, and then place the box by removing the fingers from the screen. Another possibility is to use a gyroscope, to have movement trigger some event in the mobile user interface. If a mobile phone is placed on a table facing up, and the phone starts ringing, turning the phone face down can trigger the silent function, for instance.
 
 \section{Mobility}
+An essential difference between PCs and mobile devices is the mobile device's mobility. A mobile smart phone is carried around with the user all day making it an easier accessible device, which again most likely makes the threshold for starting a device session is lower. Also the mobile device has become more personal than the personal computer, and it is probably safe to say that a mobile phone can be connected with one single user, while a PC more frequently are used by several users.
 
-\subsection{GPS}
+\subsection{User location}
+Most mobile devices has one or more ways of collecting the device's location, either by a GPS, using the WiFi the device is connected to or using the base station the mobile network is connected to. When obtained, the device's location can be used to provide the user with news that resided nearby, either fresh news or historical news about events that happened a while back.
 
 \subsection{Connectivity}
+Mobile devices has the ability to stay connected to the Internet almost everywhere and all the time, making it quite effortless to check the latest news, and using the mobile device as a pastime activity while waiting for someone or riding the bus. In this manner, people are shifting towards a longer and more frequent mobile news consumption trend\cite{stateofthemedia2012}.
 
+\subsection{Scanning}
+Many mobile device has the ability to scan QR codes, RFID chips or other types of NFC units. If, for instance, a user walks by a poster advertising for a concert that is about to happen, and the poster has a QR code containing the information of the name of the artist, where it is playing etc. the mobile user can scan this code with its mobile device, and by some processing on the back-end side, bring up news about this happening.
 
 \section{Software}
 

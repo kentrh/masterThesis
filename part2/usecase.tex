@@ -60,11 +60,35 @@ The back end starts by subscribing to different RSS feeds, consisting of differe
 
 \begin{enumerate}
 	\item Extract RSS entries
+	\begin{itemize}
+		\item The RSS entries are extracted using an RSS parsing library for Java, called ROME.
+	\end{itemize}
+
 	\item Download HTML contents
+	\begin{itemize}
+		\item The news pages are scraped using a library called Apache Tika.
+	\end{itemize}
+	
 	\item Extract body text
+	\begin{itemize}
+		\item Extraction of the body text are done using the same library as for downloading the HTML contents, Apache Tika.
+	\end{itemize}
+	
 	\item Named Entity Recognition
+	\begin{itemize}
+		\item For the NER, a library called Apache OpenNLP is used, and the model used is especially trained for the Norwegian language.
+	\end{itemize}
+	
 	\item Geo Code tagging
+	\begin{itemize}
+		\item Geo Code tagging is realized through the Google Location API.
+	\end{itemize}
+	
 	\item Index document
+	\begin{itemize}
+		\item The documents are indexed in an Apache Solr solution, which supports queries that combine geographical and content-related elements.
+	\end{itemize}
+	
 \end{enumerate}
 
 Further these news article documents are stored in a search engine/document store service, using Apache Solr\footnote{Apache Solr stems from the Apache Lucene project and provides an open source enterprise search platform. More information at \url{http://lucene.apache.org/solr/}.}.

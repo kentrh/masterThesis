@@ -2,10 +2,197 @@
 Following are a comparison of all the commercial mobile news applications listed in section \ref{commercial_news_applications}, as well as the application created associated with the use case.
 
 
+\section{Table comparison}
 A lot of the commercial news recommender applications are quite alike on several levels. In table \ref{table_comparing_apps} the key features of the apps are extracted and sorted in to a more clean view. Using this table makes it easier to see where the apps differ and where they are similar. 
 
 Because of Google's acquirement of Wavii resulting in a removal from the app stores, some of the information for this application was not obtainable when comparing the different news apps.
 
+\subsection{Explanation}
+Following is an explanation of what the different comparison criteria means.
+
+\subsubsection{News Sources}
+News sources are which types of sources the news applications make use of. There are three main types, namely:
+
+\begin{itemize}
+	\item News publishers
+	\begin{itemize}
+		\item Traditional news content providers like The New York Times or BBC
+	\end{itemize}
+
+	\item Blogs
+	\begin{itemize}
+		\item Independent blogs like an artist's own blog or larger scale blogs like the tech blog Engadget.
+	\end{itemize}
+
+	\item Social networks
+	\begin{itemize}
+		\item Include friends' feeds in the app or content friends shared on their social networks, like Facebook, Twitter, Google+.
+	\end{itemize}
+\end{itemize}
+
+\subsubsection{Perspectives}
+Perspectives are which different perspectives the current app provides. The different perspectives are presented in section \ref{perspectives_presentation}.
+
+\subsubsection{Login}
+If the app provides an opportunity of logging in, and which consequences this has for the use of the app. There are four different types:
+
+\begin{itemize}
+	\item Yes
+	\begin{itemize}
+		\item The login is mandatory to be able to use the application.
+	\end{itemize}
+
+	\item No
+	\begin{itemize}
+		\item There is no login opportunities.
+	\end{itemize}
+
+	\item Voluntary
+	\begin{itemize}
+		\item It is optional to login, and there are no limitations when using the app, other than not being able to get the devices preferences synced with other devices.
+	\end{itemize}
+
+	\item Voluntary, limited use
+	\begin{itemize}
+		\item The login is voluntary, but if choosing not to log in some of the features are not available, in addition to not being able to sync the preferences with other devices.
+	\end{itemize}
+\end{itemize}
+
+
+\subsubsection{Input mode}
+Input mode are the different ways of interacting with the application, there are three main types:
+
+\begin{itemize}
+	\item Gestures
+	\begin{itemize}
+		\item The input is registered in terms of different gestures like swiping, hold and drag, or long press.
+	\end{itemize}
+
+	\item Buttons
+	\begin{itemize}
+		\item Buttons are used to interact with the application.
+	\end{itemize}
+
+	\item Text input
+	\begin{itemize}
+		\item Text input is used when interacting with the application. This is primarily used to write search phrases inside the application, and not as part of any navigation logic.
+	\end{itemize}
+\end{itemize}
+
+\subsubsection{User profiling}
+The different ways the application uses to gather information when building user profiles and recommending news to the user. There different kinds are:
+
+\begin{itemize}
+	\item Thumbs up/down
+	\begin{itemize}
+		\item The user gives explicit feedback about an article in terms of thumb up button or thumb down button, which rates as positive or negative feedback respectively.
+	\end{itemize}
+
+	\item Log analysis
+	\begin{itemize}
+		\item The application collects implicit feedback by logging how the user is using the application and the log is then sent to the back-end for further analysis.
+	\end{itemize}
+
+	\item Stored topics
+	\begin{itemize}
+		\item When a topic is stored by the user, this event is taken into account when building the user profile and recommending news.
+	\end{itemize}
+
+	\item Likes
+	\begin{itemize}
+		\item The user gives explicit feedback to an article by in some way liking this article via a button or gesture.
+	\end{itemize}
+
+	\item Social activity
+	\begin{itemize}
+		\item The application crawls the user's social networks searching for content that the user has shared or friends of the user has shared with the user. The content that is shared is further analyzed to affect the user profile or recommendation in some way.
+	\end{itemize}
+
+	\item Blocked sources
+	\begin{itemize}
+		\item The user gives explicit feedback by blocking a content source or a specific author.
+	\end{itemize}
+
+	\item Location
+	\begin{itemize}
+		\item The device's location is gathered and the app can recommend news based on the device's location.
+	\end{itemize}
+
+	\item Saved articles
+	\begin{itemize}
+		\item Articles that are in some way saved are analyzed and taken into account when building the user profile and recommending news.
+	\end{itemize}
+
+	\item Overriding user profile
+	\begin{itemize}
+		\item The user can override its own profile if he or she means that the user profile that has been created by explicit and/or implicit feedback is somehow inaccurate or in other ways wrong.
+	\end{itemize}
+\end{itemize}
+
+
+\subsubsection{Filtering}
+The different ways an application provides to filter the content. The different approaches is as follows:
+
+\begin{itemize}
+	\item Search
+	\begin{itemize}
+		\item News articles can be filtered by searching for a topic or keyword
+	\end{itemize}
+
+	\item Category
+	\begin{itemize}
+		\item News articles can be filtered by categories
+	\end{itemize}
+
+	\item User profile
+	\begin{itemize}
+		\item News articles can be recommended according to the user profile.
+	\end{itemize}
+
+	\item Related stories
+	\begin{itemize}
+		\item News articles can be filtered by related stories to the current displaying story.
+	\end{itemize}
+
+	\item Similar stories
+	\begin{itemize}
+		\item News articles can be filtered by similar stories to the current displaying story.
+	\end{itemize}
+
+	\item Tags
+	\begin{itemize}
+		\item News articles can be filtered by tags that are somehow connected to a news article.
+	\end{itemize}
+
+	\item Social behavior
+	\begin{itemize}
+		\item News articles can be filtered by social behavior, for instance by number of likes on Facebook, or number of retweets on Twitter.
+	\end{itemize}
+
+	\item Location
+	\begin{itemize}
+		\item News articles can be filtered based on the device's location if the news article has location information.
+	\end{itemize}
+
+	\item Publishers
+	\begin{itemize}
+		\item News articles can be filtered by a single content publisher.
+	\end{itemize}
+\end{itemize}
+
+
+\subsubsection{Trends}
+Trends is if an application has a feature for showing trending news over time. For instance a graph showing the amount of articles that has been published on a single topic over a given amount of time.
+
+
+\subsubsection{Sharing}
+Which types of channels the application offers to share content via. These can be social networks like Twitter or Facebook, or other types like Email or SMS.
+
+\subsubsection{Storing}
+Which types of storing an article the application supports. These can be other commercial solutions like Pocket or Instapaper, or just an own developed solution provided by the application itself.
+
+
+\subsection{The table}
 
 \begin{landscape}
 \centering
@@ -21,7 +208,7 @@ Because of Google's acquirement of Wavii resulting in a removal from the app sto
 \multicolumn{12}{c}{\tablename\ \thetable\ -- \textit{Continued from previous page}} \\
 
 \hline
-\textit{\textbf{Feature / App}} & \textbf{Zite} & \textbf{Flipboard} & \textbf{Pulse} & \textbf{Summly} & \textbf{News360} & \textbf{Circa} & \textbf{Wavii} & \textbf{Prismatic} & \textbf{Taptu} & \textbf{Feedly} & \textbf{Use case} \\ \hline
+\textit{\textbf{Feature / App}} & \textbf{Zite} & \textbf{Flip-board} & \textbf{Pulse} & \textbf{Summly} & \textbf{News360} & \textbf{Circa} & \textbf{Wavii} & \textbf{Pris-matic} & \textbf{Taptu} & \textbf{Feedly} & \textbf{Use case} \\ \hline
 \endhead
 
 \hline \multicolumn{12}{c}{\textit{Continued on next page}} \\
@@ -30,11 +217,11 @@ Because of Google's acquirement of Wavii resulting in a removal from the app sto
 \endlastfoot
 
  
-\textbf{News sources} & News publishers, blogs & News publishers, blogs, social networks & News publishers, blogs, social networks & News publishers & News publishers & News publishers, blogs & News publishers, blogs, social networks & News publishers, blogs, social networks & News publishers, blogs, social networks & News publishers, blogs & News publishers \\ \hline
+\textbf{News sources} & News publishers, blogs & News publishers, blogs, social networks & News publishers, blogs, social networks & News publishers, blogs & News publishers, blogs & News publishers, blogs & News publishers, blogs, social networks & News publishers, blogs & News publishers, blogs, social networks & News publishers, blogs & News publishers \\ \hline
 
 \textit{\textbf{UI}} &&&&&&&&&&& \\ \hline
 
-\textbf{Perspe-ctive} & RSS, web, summary & RSS, web, full article & RSS, web & short summary, long summary, web & RSS, full article, web & RSS, summary, web, map & Events, web & RSS, full article & RSS, web & RSS, web & RSS, full article, map \\ \hline
+\textbf{Perspe-ctives} & RSS, web, summary & RSS, web, full article & RSS, web & short summary, long summary, web & RSS, full article, web & RSS, summary, web, map & Events, web & RSS, full article & RSS, web & RSS, web & RSS, full article, map \\ \hline
 
 \textbf{Login} & Voluntary & Voluntary, limited use & Yes & No & Voluntary & Voluntary & Yes & Yes & Voluntary & Voluntary, limited use & Voluntary \\ \hline
 
@@ -42,11 +229,11 @@ Because of Google's acquirement of Wavii resulting in a removal from the app sto
 
 \textit{\textbf{Techno-logy}} &&&&&&&&&&& \\ \hline
 
-\textbf{User profiling} & Thumbs up/down, log analysis, stored topics, likes, social activity, blocked sources & Blocked authors, stored topics, social activity & Social activity, user location & N/A & Thumbs up/down, social activity, log analysis, saved articles & N/A & Social activity & Social activity, log analysis (in real time), stored topics, starred articles & N/A & N/A & Log analysis, user location, overriding user profile \\ \hline
+\textbf{User profiling} & Thumbs up/down, log analysis, stored topics, likes, social activity, blocked sources & Blocked authors, stored topics, social activity & Social activity, user location & N/A & Thumbs up/down, social activity, log analysis, saved articles & N/A & Social activity & Social activity, log analysis (in real time), stored topics, saved articles & N/A & N/A & Log analysis, user location, overriding user profile \\ \hline
 
 \textbf{Filtering} & Search, category, user profile, related stories, tags & Search, category, social behavior(cover stories) & Search, category, location & Search, category & Search, category, user profile, location, similar stories & Category & Search, category, social behavior & Search, category, user profile, related stories, tags, publishers & Search, category & Search, category & Search, category, related stories, user profile, location  \\ \hline
 
-\textbf{Trends (??)} & Discussed, shared & Trend analysis engine & N/A & N/A & Trend analysis engine & Editorial staff & N/A & Trend analysis engine & Most shared & N/A & N/A\\ \hline
+\textbf{Trends} & N/A & N/A & N/A & N/A & N/A & N/A & N/A & N/A & N/A & N/A & N/A\\ \hline
 
 \textbf{Sharing} & Email, Twitter, Facebook, Google+, LinkedIn, SMS & Email, Twitter, Facebook, Google+, LinkedIn & Email, Twitter, Facebook & Email, Twitter, Facebook & Email, Twitter, Facebook, Google+ & Email, Twitter, Facebook, SMS & N/A & Email, Twitter, Facebook & Email, Twitter, Facebook, LinkedIn & Email, Twitter, Facebook, Google+, Buffer & Email, Twitter, Facebook \\ \hline
 
@@ -55,8 +242,3 @@ Because of Google's acquirement of Wavii resulting in a removal from the app sto
 \end{longtable}
 \end{center}
 \end{landscape}
-
-
-\section{The different apps and their perspectives}
-
-go through the different apps and how the perspectives are linked
