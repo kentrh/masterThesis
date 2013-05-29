@@ -1,4 +1,5 @@
 \chapter{Perspectives}
+\label{chapter_perspectives}
 The different perspectives will be presented and following in this chapter is a more thorough examination of how the different perspectives are related, how one perspective translates to another, the transition between them, and which perspectives fits which purposes.
 
 
@@ -136,19 +137,143 @@ The map perspective has two main purposes. It can work as an additional perspect
 It can also work as an entry point, but this can become a foul experience if not done right and then defeat its purpose. If used as an entry point, it would probably not be of much use to show a lot of articles spread out all over the world on a such small device, and have the user click every map pin to see if this could be an interesting story or not. On the other hand if the device can collect the users location and retrieve news that are nearby with coordinates that are accurate to where the news story concerns, the user can probably have a better understanding of the location, since the user is located nearby and probably knows the area better and can easier relate to the location. Then if a map pin is clicked the user can be brought further down in the navigation hierarchy.
 
 
+\section{Perspectives and their connections in the different apps}
+Following is a simple navigation chart showing how the different perspectives in the different applications are connected.
+
+\subsection{Zite}
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=50mm]{GFX/statecharts/Zite.png}
+\caption{A simple navigation chart showing the connection between perspectives in the mobile news application Zite.}
+\label{state_chart_zite}
+\end{figure}
+
+Figure \ref{state_chart_zite} shows that Zite first presents the user with the RSS perspective showing the top stories based on the user profile. Further the user can navigate from this perspective to the full article perspective by clicking one of the articles or navigate to a new RSS perspective listing articles from a topic. To move to the topic RSS perspective, the user can either search for a topic, click one the keywords that is connected to the story showing in the top stories RSS perspective, or selecting one of the topics already stored by the user. The RSS perspective can always open a new RSS perspective by clicking one of the topics associated with an article. Whenever a story is clicked in the RSS perspective, the full article perspective is shown, and from the full article perspective the user can navigate to the web perspective
+
+\subsection{Flipboard}
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=80mm]{GFX/statecharts/Flipboard.png}
+\caption{A simple navigation chart showing the connection between perspectives in the mobile news application Flipboard.}
+\label{state_chart_flipboard}
+\end{figure}
+
+Figure \ref{state_chart_flipboard} shows that Flipboard greets the user with a category selection screen. From here the user can select a category that is predefined by the user or search for a topic, which in either way bring the user to the RSS perspective. From the RSS perspective the user can again search for a topic which will navigate to new RSS perspective or click an article an be presented with the full article perspective. From the full article perspective, the user can navigate to the web perspective.
+
+\subsection{Pulse}
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=50mm]{GFX/statecharts/Pulse.png}
+\caption{A simple navigation chart showing the connection between perspectives in the mobile news application Pulse.}
+\label{state_chart_pulse}
+\end{figure}
+
+Figure \ref{state_chart_pulse} shows that Pulse greets the user with the RSS perspective. This RSS perspective lists a number of RSS feeds within a certain category. The user can navigate from here to another RSS perspective listing RSS feeds from another category or search for other content and open this content in the same RSS perspective. If a story is clicked, the user is presented with another RSS perspective, but for a single article. From this single article RSS perspective, the user can navigate to the web perspective to show the whole article at the content publishers web site. 
+
+\subsection{Summly}
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=100mm]{GFX/statecharts/Summly.png}
+\caption{A simple navigation chart showing the connection between perspectives in the mobile news application Summly.}
+\label{state_chart_summly}
+\end{figure}
+
+Summly starts off by presenting the user with an RSS perspective holding one trending news article, as shown in figure \ref{state_chart_summly}. From here the user can open this news article in a short summary perspective or navigate to the category selection screen. In the category selection screen the user can search for and add new topics to the category list or click a category or topic to present the short summary perspective. Once in the short summary perspective, the user can navigate between different articles in this category by performing a horizontal swipe, open a long summary perspective by double tapping the article or open the web perspective showing the whole article at the content publishers own web site. The user can also navigate to the web perspective from the long summary perspective, but not navigate between articles from here.
+
+\subsection{News360}
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=100mm]{GFX/statecharts/News360.png}
+\caption{A simple navigation chart showing the connection between perspectives in the mobile news application News360.}
+\label{state_chart_news360}
+\end{figure}
+
+News360 starts by presenting the user with an RSS perspective containing the top stories based on the user profile, as shown in figure \ref{state_chart_news360}. In this perspective, the user can navigate between the stories in this category or topic by performing a horizontal swipe. From here the user can also reload the RSS perspective by selecting a different category or by searching for another topic or category. The user can navigate from this perspective to an RSS perspective showing a single article or to an RSS perspective showing a list of articles published by a single publisher by clicking on the publisher name as well. The publisher RSS perspective can open single articles from this publisher in an RSS perspective, and further open a web perspective showing the same article.
+
+The single article RSS perspective on the left-hand side in figure \ref{state_chart_news360}, shows the article clicked in the first RSS perspective. In this perspective the user can access the web perspective showing this article at the content publishers website. The user can also choose to open other similar articles covering the same story in this perspective. The RSS perspective holding a list of a publisher's stories, can also be accessed from this perspective.
+
+\subsection{Circa}
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=80mm]{GFX/statecharts/Circa.png}
+\caption{A simple navigation chart showing the connection between perspectives in the mobile news application Circa.}
+\label{state_chart_circa}
+\end{figure}
+
+As shown in figure \ref{state_chart_circa}, the user is presented with an RSS perspective showing the top stories. The user can reload this perspective by selecting another category to show articles from. The user can also access an RSS perspective holding stories that are followed by the user from the initial RSS perspective. Further both the latter RSS perspectives links to a summary perspective. From this perspective the user can navigate to the web perspective to show the articles that the summaries are based upon, or the user can navigate to summaries of other related articles. The summary perspective can also contain a map perspective, but the map perspective does not have any interactions connected to it, it only shows where the articles concerns.
+
+\subsection{Wavii}
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=50mm]{GFX/statecharts/Wavii.png}
+\caption{A simple navigation chart showing the connection between perspectives in the mobile news application Wavii.}
+\label{state_chart_wavii}
+\end{figure}
+
+Wavii presents the user with a event perspective holding a list of different events within a category or topic, as shown in figure \ref{state_chart_wavii}\footnote{The navigation chart for Wavii might not be completely accurate as the chart was based on previous notes because of the application's removal from the App Store}. The user can reload the event perspective with other topics or categories the user has chosen to follow. If an event is clicked, Wavii shows a summary of the stories that caused the event in a summary perspective. Further the user can choose to open the stories that caused the event in a web perspective.
+
+\subsection{Prismatic}
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=50mm]{GFX/statecharts/Prismatic.png}
+\caption{A simple navigation chart showing the connection between perspectives in the mobile news application Prismatic.}
+\label{state_chart_prismatic}
+\end{figure}
+
+Prismatic greets the user with an RSS perspective holding news that are recommended for the user based on its profile, as shown in figure \ref{state_chart_prismatic}. From here the user can reload the initial RSS perspective by clicking one of the topics that are connected to an article, clicking topics that are suggested by Prismatic based on the user profile or searching for other topics. When an article is clicked it is shown in a full article perspective. From here the user can load a new RSS perspective showing related stories, stories based on topics connected to a story, or stories from a single content publisher. The story itself also contains a lot of highlighted keywords that, when pressed, opens a web perspective showing content regarding this keyword. This content can be another news story, or a page explaining a certain term etc.
+
+\subsection{Taptu}
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=50mm]{GFX/statecharts/Taptu.png}
+\caption{A simple navigation chart showing the connection between perspectives in the mobile news application Taptu.}
+\label{state_chart_taptu}
+\end{figure}
+
+As shown in figure \ref{state_chart_taptu}, Taptu greets the user with an RSS perspective that holds several lists with different categories and feeds. These lists can be modified in several ways, like merged and split, and new feeds can be added by searching or choosing some predefined feeds. When an article is clicked, the full article perspective is shown containing that article. The user can navigate between articles in this list by performing a horizontal swipe, and also open the showing article in a web perspective. The article may also contain references to other content, which is opened in a web perspective if clicked.
+
+\subsection{Feedly}
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=50mm]{GFX/statecharts/Feedly.png}
+\caption{A simple navigation chart showing the connection between perspectives in the mobile news application Feedly.}
+\label{state_chart_feedly}
+\end{figure}
+
+Feedly starts off by presenting the user with a RSS perspective, as shown in figure \ref{state_chart_feedly}, containing a news list from all of the topics or feeds the user has stored. This RSS perspective can be reloaded, either by searching for a topic or by selecting a category or topic that the user has already stored. If an article is clicked, another RSS perspective is shown, but holding the article that was clicked. The user can navigate between the articles in the list by swiping horizontally in the single article RSS perspective and also open the article in a web perspective containing the full article at the content publisher's web site.
+
+
+\subsection{Use Case}
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=80mm]{GFX/statecharts/UseCase.png}
+\caption{A simple navigation chart showing the connection between perspectives in the use case mobile news application.}
+\label{state_chart_usecase}
+\end{figure}
+
+The use case application starts off by presenting the user with an RSS perspective, as shown in figure \ref{state_chart_usecase}, consisting of the latest top story from the recommendation based on the user profile. From here the user can navigate to the category selection screen, and from the start screen or the category selection screen, the user can navigate to the RSS perspective holding articles from the top stories, the category clicked in the category selection screen or by searching for a topic in the start screen. This RSS perspective shows only one article at a time, but by performing a horizontal swipe the user can navigate between the different articles in this category. From this RSS perspective the user can navigate to the full article perspective, which also holds only one article at a time, but to access related stories the user can swipe horizontally. The map perspective, which shows where the article concerns are also accessible from the full article perspective.
+
 \section{How the perspectives are supported on the mobile platform}
 
 Following is a description of how the different perspectives are supported on the mobile platform with regard to which technologies and opportunities they make use of, and how they are realized. This is, as mentioned earlier, from a iOS point of view, but applies to most other smart phones as well, as these technologies or opportunities are widely used on several mobile platforms.
 
-Most of the information represented throughout the different perspectives, are not specific device capabilities or technologies that are available only on a mobile device. Primitive news articles contain mainly text, images and sometimes videos, and these are representations almost every computational device with possibilities for a UI, can display with the technologies used today. However there are some cases where the mobile device fits well.
+To represent data, the data must be gathered and parsed in some way. News publishers most often gather and create their own data through the work of journalists. Third-party developers creating news applications often start by gathering different RSS feeds and process these further. Either way, mobile news applications need to get their data from somewhere, parse this data and represent it in some way. Raw data transferred over the Internet often is represented by XML or JSON, and parsing this data is the first step for being able to represent any of the perspectives. Some of the mobile operating systems has native support for parsing XML or JSON, and if not, there are numerous external libraries that support this that are easy accessible and free to use.
 
-%The RSS perspective is commonly used to give a quick overview or introduction to a news article, and serves well as a link to the full article as the RSS feed includes the URL pointing to the web page where the full article is hosted. When the creator of the application does not have the rights to present the full article perspective because it would cause a copyright infringement, the web perspective can be used. 
+Further when the data is parsed, a way of representing the data has to found. As all of the major mobile operating systems has native support for displaying text, images, sound and video, there just a matter of how to display it in a usable manner.
 
+All perspectives listed in section \ref{perspectives_presentation}, except the web perspective and map perspective, normally uses parsed raw data, and can be represented as the developer wishes. Also these perspectives normally does not represent the data in any other form than text, image, video or sound, which are all natively supported.
 
-% \subsubsection{Full Article}
-% \subsubsection{RSS}
-% \subsubsection{Entity}
-% \subsubsection{Event}
-% \subsubsection{Web}
-% \subsubsection{Summary}
-% \subsubsection{Map}
+The map perspective uses a map to pin the article's location on. It may also show some sort of text, like the title, connected to the map pin. Opening a map view inside an application is also natively supported on all the major mobile operating systems, making this, if not a trivial task, a fairly easy task.
+
+The web perspective however, is not a perspective the developer can control much over. Opening a web page inside a mobile application is supported by the operating systems, but the layout of the content and how it is represented is controlled by the content publishers managing the web page. The native application can control the zoom level of the content and it usually has to support some sort of navigation controls inside the web perspective. This because, the web perspective acts much like a regular web page, and all links on the web page are initially clickable, which makes it possible for the user to navigate around on the web page inside of the application. If, for instance, the web perspective is showing an article, and this article links to another related article inside the web perspective, the user can click this link and view the related article. Hence, the web perspective should have some navigation support like moving backwards and forward, similar to a regular web browser. In many cases it is possible to override these settings by turning off the ability to click links, but this may cause a confusing and frustrating element at the user's end if the user cannot click to view a related article and the web page does not act like a normal web page to which the user has grown custom to.

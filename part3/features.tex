@@ -1,4 +1,5 @@
 \chapter{Mobile features}
+\label{chapter_mobile_features}
 
 Having a news application in mind, following are a description the most important aspects when creating a mobile application and how it is different from traditional desktop applications, considering the various features and abilities that are involved.
 
@@ -31,8 +32,31 @@ Mobile devices has the ability to stay connected to the Internet almost everywhe
 Many mobile device has the ability to scan QR codes, RFID chips or other types of NFC units. If, for instance, a user walks by a poster advertising for a concert that is about to happen, and the poster has a QR code containing the information of the name of the artist, where it is playing etc. the mobile user can scan this code with its mobile device, and by some processing on the back-end side, bring up news about this happening.
 
 \section{Software}
+Most mobile devices can only run one application at a time, making the possibility to integrate features from other applications seamlessly an important aspect when designing and developing a mobile application. For instance, when using a mobile news application many users may feel the need to share a story they find interesting on a social network. This should be doable without costing the user too much effort, and without having the user to loose its news reading focus by having to perform a lot of operations to get it done. By integrating this possibility in an effortless way, sharing a news story to social network can be done in matter of a few clicks. 
 
-\subsection{Other Apps}
+All the most popular mobile operating systems, like iOS, Android and Windows Phone, allows for an easy integration between applications, to make sharing content to social networks an effortless task. In the mobile news application developed as part of this thesis an article can be shared to Facebook, Twitter or via mail by simply holding down one finger on the RSS perspective that are showing the news article to bring up the sharing control, and then choosing the desired sharing channel. Then an OS integrated sharing view is brought up and the user can share the story right from the news application without having to switch to another application.
 
+This approach extends much further than just sharing content on social sites. If the external service the application wants to make use of, is not incorporated in the OS, the external service most likely has an SDK that can be included in the application to make use of the service directly from the application. This be showing a place on a map, sharing content, saving stories for reading later or watching movie clips.
 
 \section{Monetizing}
+As the trend of consuming news content is shifting from purchasing and reading real newspapers to accessing free news content on the Internet, news publishers has to use other approaches to earn money. There are several monetizing approaches to earn money through a news mobile application, for instance advertising, paid subscription, in-app purchases or paid applications.
+
+To buy applications or performing other types of purchases on the different mobile application stores, the user usually has to store its credit card information on beforehand, making later purchases a quick and easy process. This can make the threshold for paying for content lower, and heighten the income.
+
+\subsection{Advertising}
+Advertising is a widely used approach on news web sites to earn money. The content providers can sell advertising space on their web sites directly to companies that want to advertise, or they can use a middle layer advertising service that provides the content publishers with ads, and in this way not having to get advertisers themselves. 
+
+A problem with using ads on web sites on desktop computers is that there are several plug-ins for the various web browsers that can remove ad banners for the user. On the mobile platform this is not a problem big problem yet, as the browsers used on mobile phones not are as configurable as browsers on desktop computers.
+
+There are a lot, probably several hundred, of different mobile advertising services, which offers different types of services and integrates nicely with a mobile application, the main issue is to find the right one.
+
+\subsection{Paid Subscription}
+Paid subscription is a way for the content publishers to give the paying customer more content than what is available to all the other non-paying users, and it also creates a form of a lock-in, as the subscriptions normally renews themselves and is automatically deducted from the users account. The news applications that offers a subscription are often just a digitalized version of the paper version of the same newspaper, and are available through the different mobile applications stores. These applications are also mainly provided by the news publishers themselves and not by third parties. The subscription based applications are also often a special type of application, available mainly for newspapers and magazines to digitally distribute their content.
+
+There are also other ways of offering paid subscriptions, through web applications for instance, where a subscription can be bought through other payment services than the ones offered by the mobile application stores. This is an approach preferred by many content providers as the application stores often takes quite a large percentage of the revenue made through the app stores.
+
+\subsection{In-app Purchases}
+In-app purchases is a way of selling content or services inside a mobile application. As the credit card information normally already are stored, this is an easy way for the user to purchase content and services. A common strategy is to offer a free mobile application to make the threshold of downloading it lower, and further include in-app purchases to gain revenue inside the application. It is also a pretty trivial process for the developers and to include and execute an in-app purchase inside the application. An in-app purchase can, for instance, remove advertisement inside the application for a certain amount of money, for a certain amount of time, or reveal premium content not available to non-paying customers.
+
+\subsection{Paid Applications}
+Applications can also be sold on the application stores for a certain amount of money. This may be the least profitable approach, as users most likely want to try the application before paying. This can however be solved by offering a free application in addition with less functionality or content, so the user has the ability to try before buying.

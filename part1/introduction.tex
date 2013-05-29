@@ -21,9 +21,6 @@ Following are the research questions that this thesis aims to give answers to.
 In which way is it possible to represent news articles and how can one view representing a news article be translated to another view. What type of information is represented in each of the different views and can one view be misleading or suffer from a lack of information compared to another view, if presented a part from the other perspectives?
 
 Different perspectives to present news via will be presented, as well as how they are related and corresponds with each other. 
-%logical structure of news: articles, maps, entities, categories,...)  ... should come up with a model to show how different aspects of news are related.
-
-%(Create some figure to show how they are related, like a pin on a map with title corresponds to the name of the place in the title for instance. Or an entity like Madrugada in an entity view, can correspond to a word (Madrugada) in a text about Sivert Høyem)
 
 
 \subsubsection{What are particular features of mobile user interfaces that affect the mobile news user experience?}
@@ -31,11 +28,6 @@ Different perspectives to present news via will be presented, as well as how the
 In which way are mobile user interfaces different from, for instance, desktop computer user interfaces? What considerations has to be done when designing a mobile user interface and how do the interaction methods differ from one another?
 
 The most relevant differences between a mobile user interface and other interfaces where news can be accessed will be presented. Also how these differences may have an impact on the news reading abilities on a mobile device will be discussed.
-%(platform stuff)
-
-%(Touch gestures plays a significant role when designing a mobile app, save space wherever you can -> gestures instead of buttons, make more screens with less info instead of cluttering the screen. Only one domain per screen, type of. E.g. in this case separate map and article view.
-
-%Unable to hover with the mouse
 
 
 \subsubsection{What are relevant perspectives on news in current mobile news apps?}
@@ -44,40 +36,59 @@ Subjecting a handful of already developed mobile news applications, how is the n
 
 Approximately a dozen of commercial and non-commercial mobile news application will be targeted and the different perspectives in each application and how they are related in the application will be presented.
 
-%(what do they address, and how do they implement it)
-
-%(Most apps combine categories and entities. Often the user can choose from different high level ordered categories like technology or economics, but can search for other categories and entities as well, and add these with the same hierarchical significance as the other news categories. Topics/entities can be flowers, BMW, Chelsea, cycling, etc.. Anything the user finds interesting.)
-
 
 \subsubsection{How can these perspectives be supported on a mobile platform to increase user experience and provide maximum flexibility?}
 
 What is the main goal for the different perspectives and are they successful in terms of presenting the information that the user wants? What do they convey and is this perspective contributing to a better user experience? Do these perspective depend on other technologies or APIs found on the mobile device, like GPS or gyroscope?
 
 The different perspectives presented will be evaluated in terms of functionality and how they can contribute to improving the news reading experience, or on the other hand, create more confusion than supplying the user with additional useful information.
-%(gestures vs. input, flow between related perspectives like article \& map location, etc.)  .... here we should show how we translate the model above into particular user interface features.
 
 
 \subsubsection{The Smartmedia Mobile News Recommender Use Case}
-%-  User case: Our news recommender system
 As a use case for this thesis, the Smartmedia Mobile News Recommender system\footnote{The Smartmedia Mobile News Recommender system's project web site can be found at \url{http://smartmedia.idi.ntnu.no}.} will be applied. A mobile application will be developed on top of the existing back end, as shown in figure \ref{tech_news_app_architectural_view}, limited to the iOS platform, for the sake of simplicity.
 
 Further the use case will be compared to existing mobile news applications in terms of available perspectives and functionality.
 
-\section{Approach (Trenger litt hjelp her)}
+\section{Approach}
 Following are the main approaches to answer the research questions.
 
 \begin{enumerate}
-	\item Select a particular use case.
-	\item Identify the state of commercial and non-commercial contributions.
-	\item Describe and evaluate the use case compared to the other contributions.
+	\item Select a particular use case to design and develop.
+	\item Identify the state of commercial and non-commercial contributions, news applications and their perspectives.
+	\item Compare and discuss how the contributions are related and realized.
 \end{enumerate}
 
 
 \section{Results}
-
+The result of this project focuses upon identifying the state of mobile news applications that are available today, and especially how they are realized in terms of design, navigation logic, recommendation, and the mobile features to support all of this. A use case application is also a part of the result in terms of an practical approach on how to realize a mobile news recommendation application.
 
 \section{Report Structure}
 
-\subsubsection{Chapter 2: Lorem}
+\subsubsection{Chapter \ref{chapter_theoretical_overview}: \nameref{chapter_theoretical_overview}}
+A quick introduction to important terms and technologies associated with mobile devices, news applications, and recommendation.
 
-\subsubsection{Chapter 3: Lorem}
+\subsubsection{Chapter \ref{chapter_related_work}: \nameref{chapter_related_work}}
+A presentation of related work done on one or more of the topics that this thesis focuses upon, mainly within some aspect of a mobile news recommender application.
+
+
+\subsubsection{Chapter \ref{chapter_usecase}: \nameref{chapter_usecase}}
+The presentation of the use case associated with this thesis, both front-end and back-end.
+
+
+\subsubsection{Chapter \ref{chapter_perspectives}: \nameref{chapter_perspectives}}
+The most common perspectives used in mobile news applications, their correlations and purpose will be presented, as well as how they are used in the different mobile news applications presented in section \ref{commercial_news_applications}.
+
+\subsubsection{Chapter \ref{chapter_mobile_features}: \nameref{chapter_mobile_features}}
+Which mobile features that are common in mobile news applications and how they are different from other systems, will be presented.
+
+\subsubsection{Chapter \ref{chapter_comparing_applications}: \nameref{chapter_comparing_applications}}
+The applications examined in section \ref{commercial_news_applications}, as well as the use case application presented in chapter \ref{chapter_usecase}, will be compared.
+
+\subsubsection{Chapter \ref{chapter_discussion}: \nameref{chapter_discussion}}
+The different perspectives' usability will be discussed, and the examined news applications will be classified into three main categories. The implementation of the use case will also be discussed.
+
+\subsubsection{Chapter \ref{chapter_conclusion}: \nameref{chapter_conclusion}}
+The conclusion drawn from this study will be presented.
+
+\subsubsection{Chapter \ref{further_work}: \nameref{further_work}}
+A set of proposals for further work will be listed and briefly explained.
