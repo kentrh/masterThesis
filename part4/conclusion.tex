@@ -1,11 +1,14 @@
 \chapter{Conclusion}
 \label{chapter_conclusion}
 
-\begin{itemize}
-	\item most applications use the same approach in terms of nav logic
-	\item perspectives need to follow an hierarchial order to serve the best purpose?
-	\item recommendation is becoming an important part of mobile news applications
-	\item news content consumption is heavily shifting towards mobile
-	\item three applications has been bought while writing thesis, taptu, summly, wavii
-	\item news applications needs another approach than desktop applications, and the mobile devices supports ubiqutous news consumption well
-\end{itemize}
+Mobile news applications has become very popular, and the popularity is only increasing. During this project three of the commercial mobile news applications examined, namely Summly, Wavii and Pulse, has been sold to large software companies, Yahoo!, Google and LinkedIn respectively. With the popularity of the mobile news application growing, the scale of mobile news consumption is growing increasingly as well, alongside with the technologies that these applications make use of. Recommendation technologies, for instance, has seen a rapid growth as a technology used in news applications, especially the use of active personalization making use of implicit user feedback. 
+
+By examining the different mobile news application, one can see that there has been a common way of designing mobile news applications. Most applications greets the user with an RSS type of perspective as an entry point with a vertical scrollable view to give the user a short introduction to the different news articles, to further show a full article perspective or web perspective when an article is tapped. Pulse and Taptu uses a different approach where they also has a RSS type of perspective as an entry point with a vertical scrollable view, but they also put a horizontal scrollable view inside each element in the vertical list, which may come of as cluttered and too much information on a small screen.
+
+The use case application developed associated with this thesis, chose a different approach similar to Summly and News360, where each article has a full screen for both the RSS perspective and the full article perspective, or the summary perspective in the case of Summly. This may also be the reason that some users that tested the use case application found it a bit confusing at first, since it did not follow the most used approach.
+
+The idea with the use case application was to implement all the introduced perspectives in one consistent mobile UI, but this was not feasible at this point due to certain factors. However there is no reason that this cannot be accomplished and a proposal to how this can be done is explained in chapter \ref{further_work}.
+
+Another design pattern that was followed by all the applications examined, was the hierarchical approach to present a news article, where the perspective showing the least information was the first perspective that was presented to the user. The further down in the navigation hierarchy the user got the more information the perspective holding the news article contained.
+
+There is clearly a common way to design mobile news applications, but if this alone has any impact on the popularity of the application, is uncertain, given that the three commercial applications that were sold all had different design approaches.
