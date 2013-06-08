@@ -13,15 +13,16 @@ A PC screen can normally hold more information in one view than a mobile device,
 
 \section{Personalization}
 
-According to Cylogy, personalization is "the process of deciding - given a large set of possible choices - what has the highest value to an individual"\cite{personalization_overview}
+According to Cylogy, personalization is "the process of deciding - given a large set of possible choices - what has the highest value to an individual"\cite{personalization_overview}.
 
 \cite{thurman2012future} defines it as "A form of user-to-system interactivity that uses a set of technological features to adapt the content, delivery, and arrangement of a communication to individual users’ explicitly registered and/or implicitly determined preferences."
 
-So in other words: "give the users what they want, without them asking for it."
+So simple and a bit blunt stated: "give the users what they want, without them asking for it."
 
 \section{Recommender System}
 \label{theoretical_overview_recommender_system}
-A recommender system is a system that filters or narrows down a large data set to a smaller data set to fit a user's preference, by using one or more predefined methods.
+"The goal of a Recommender System is to generate meaningful recommendations
+to a collection of users for items or products that might interest them."\cite{melville2010recommender}
 
 Recommender systems are becoming widely used and is a necessary approach to deal with the ever growing information overload situation that are occurring nowadays. These systems can be found in many different domains, like online shopping, reading news, listening to music or streaming other types of visual media, like movies or series.
 
@@ -37,7 +38,7 @@ Content-based filtering is dependent on knowledge about the items to be able to 
 \subsubsection{Collaborative Filtering}
 Collaborative filtering is a filtering technique that proposes items based on which items other similar users have been accessing. Often large amount of user data from other users' activities or preferences are gathered and analyzed and the users are put into segments based on their behavior. If a user from one segment accesses an item, this item can be proposed as a recommended item for another user within this segment.
 
-An advantage of this approach as opposed to content-based filtering, is that collaborative filtering does not need to have an understanding of the item itself to be able to recommend it to a user. On the other hand, collaborative filtering often suffers from cold start\cite{lam2008addressing}-, scalability- and data sparsity\cite{huang2004applying} problems.
+An advantage of this approach as opposed to content-based filtering, is that collaborative filtering does not need to have an understanding of the item itself to be able to recommend it to a user. On the other hand, collaborative filtering often suffers from cold start\cite{lam2008addressing}, scalability and data sparsity\cite{huang2004applying} problems.
 
 \subsubsection{Hybrid Filtering}
 Hybrid filtering is an approach where content-based filtering and collaborative filtering are combined in some way, and it has shown that this approach is more effective in some cases, as presented in section \ref{related_work_personlized_news}.
@@ -47,7 +48,7 @@ One way of conducting the hybrid approach is to implement collaborative filterin
 \section{News Application}
 A news application is an application where a user can access news digitally via the Internet from one or more news publishing sources. This application can be provided by the content publisher itself, or it can be provided by a third party redistributing the content.
 
-News applications are becoming widely used, and the consumption of news are rapidly shifting towards accessing news online and via mobile devices (see figure \ref{pew_news_consumption_survey}).
+News applications are becoming widely used, and the consumption of news are rapidly shifting towards accessing news online and via mobile devices (see figure \ref{pew_news_consumption_survey})\cite{pewresearch2012trends19912012}.
 
 \begin{figure}[!htbp]
 \centering
@@ -57,7 +58,7 @@ News applications are becoming widely used, and the consumption of news are rapi
 \end{figure}
 
 \subsection{News Recommendation}
-News recommendation is when a news application is combined with a recommender system, explained in section \ref{theoretical_overview_recommender_system}, to provide an online news reading user with a news service that are filtered or personalized to the user's preferences and likings.
+News recommendation is when a news application makes use of a recommender system to provide an online news reading user with a news service that are filtered or personalized to the user's preferences and likings.
 
 A challenge with news recommendation, compared to for instance movie or music recommendation, is the freshness of the news. News have a short lifespan, and are best served fresh, making approaches like collaborative filtering a difficult task considering the cold start problem and data sparsity problem.
 

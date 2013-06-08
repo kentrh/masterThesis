@@ -1,5 +1,5 @@
 \chapter{Introduction}
-From the rise of the smart mobile era, starting around the mid 2000s, content consumption has shifted more and more towards the mobile scene, as the mobile devices has gotten more powerful, with larger screens and Internet access has gotten more ubiquitous. Information that previously was only accessible in paper form, i.e. books and newspapers, also has had a shifting trend towards the digital platform. With all this content and information available to almost everybody and almost everywhere in the world, the importance of being able to filter it and getting only the content that is relevant or interesting to a single user is a highly relevant and an important area of research. Just as important to be able to filter this information, is how to present the filtered information. With the small screens that follows with the mobile devices, compared to for instance desktop computers, how the information is presented, is crucial to a mobile application's success.
+From the rise of the smart mobile era, starting around the mid 2000s, content consumption has shifted more and more towards the mobile scene, as the mobile devices has gotten more powerful, with larger screens and Internet access has gotten more ubiquitous. Information that previously was only accessible in paper form, i.e. books and newspapers, also has had a shifting trend towards the digital platform. With all this content and information available to almost everybody and almost everywhere in the world, the importance of being able to filter it and getting only the content that is relevant or interesting to a single user is a highly relevant and an important area of research. Just as important to be able to filter this information, is how to present the filtered information. With the small screens that follows with the mobile devices, compared to for instance desktop computers, how the information is presented, is crucial to a mobile application's usability.
 
 \section{Problem}
 This thesis will focus on a combination of these three main topics, namely a mobile application, with the use of a recommender system to help filter the content, narrowed down to a news application's perspective, as shown in figure \ref{thesis_focus_area}.
@@ -53,14 +53,19 @@ Further the use case will be compared to existing mobile news applications in te
 Following are the main approaches to answer the research questions.
 
 \begin{enumerate}
-	\item Select a particular use case to design and develop.
-	\item Identify the state of commercial and non-commercial contributions, news applications and their perspectives.
+	\item Select a particular use case to design and develop within the domain of news recommendation, and make use of an already developed recommender system that provides real-time news from all the major Norwegian newspapers.
+	\item Identify the state of commercial and non-commercial contributions and news applications with their technology and perspectives.
 	\item Compare and discuss how the contributions are related and realized.
+	\item The application will also be presented and discussed with representatives from the media sector and researchers on web applications, after the thesis has been delivered.
 \end{enumerate}
 
 
 \section{Results}
 The result of this project focuses upon identifying the state of mobile news applications that are available today through looking at commercial applications, as well as published papers on the topic, and especially how they are realized in terms of design, navigation logic, recommendation, and the mobile features to support all of this. A use case application is also a part of the result in terms of an practical approach on how to realize a mobile news recommendation application.
+
+Implementing the client part of a news recommendation application to make it comparable to commercial news applications, is not a very difficult task, if the developer has a bit experience within the domain. The use case application was developed by a single student alongside writing this thesis. The main issue is to realize a working recommendation system, which the client application makes use of, seeing that such a back-end system craves a lot more effort and competence to be able to create, than a simple client application that makes use of the data it gets served. 
+
+In the use case application, one of the focus areas were to limit the use of buttons, and replacing them with gestures wherever possible, to not clutter the small screen with other elements than the information the application is trying to convey. This works to some extent, particularly for navigational purposes buttons are easily replaceable, although the UI may not be as intuitive as when using buttons that tells the user what is going to happen when a button is pushed. One can probably not replace all buttons with gestures, as this would require much learning before being able to use an application as intended. 
 
 \section{Report Structure}
 
@@ -79,7 +84,7 @@ The presentation of the use case associated with this thesis, both front-end and
 The most common perspectives used in mobile news applications, their correlations and purpose will be presented, as well as how they are used in the different mobile news applications presented in section \ref{commercial_news_applications}.
 
 \subsubsection{Chapter \ref{chapter_mobile_features}: \nameref{chapter_mobile_features}}
-Which mobile features that are common in mobile news applications and how they are different from other systems, will be presented.
+Which mobile features that are common in mobile news applications and how they are different from other systems, as well as how they support a mobile news application will be presented.
 
 \subsubsection{Chapter \ref{chapter_comparing_applications}: \nameref{chapter_comparing_applications}}
 The applications examined in section \ref{commercial_news_applications}, as well as the use case application presented in chapter \ref{chapter_usecase}, will be compared.

@@ -1,6 +1,6 @@
 \chapter{Perspectives}
 \label{chapter_perspectives}
-The different perspectives will be presented and following in this chapter is a more thorough examination of how the different perspectives are related, how one perspective translates to another, the transition between them, and which perspectives fits which purposes.
+The different perspectives that can display a news article will be presented and following in this chapter is a more thorough examination of how the different perspectives are related, how one perspective translates to another, the transition between them, and which perspectives fits which purposes.
 
 
 \section{The Different Perspectives}
@@ -103,7 +103,7 @@ The name of a place without knowing the coordinates of the place, can point to s
 Also an article can mention several places in the full article text, without all of these places necessarily concerns the article itself. For instance, the article can state "The rock and roll band Aerosmith from Boston, Massachusetts is playing the O2 arena in London next week, with support from the electronica band Röyksopp from Tromsø, Norway". In this example London would be the place the article concerns, and Boston and Tromsø are places that would be misleading to pin to a map with same significance as London.
 
 
-\section{Purpose of and Flow between Perspectives}
+\section{Purpose of and Flow Between Perspectives}
 The different perspectives serves different purposes, and have various areas of usage. Following are a description of the perspectives' main functions and where they convey their information to the fullest, ordered after when they are most likely to appear to the user. The more information the perspective can hold the farther down in the navigation hierarchy they are likely to be.
 
 
@@ -111,7 +111,7 @@ The different perspectives serves different purposes, and have various areas of 
 The RSS perspective often serves as an entry point to a news article and its purpose is to give a quick overview of the content of the article and/or to trigger a curiosity at the user's end to make them wanting to read more. The information in the RSS perspective are often authored by a journalist from the content publisher to achieve exactly this purpose, to drive more traffic to the content publisher's web page, which again will give the content publisher more advertising revenue. With this in mind the RSS perspective is on a thin line between supplying enough information to give the user an understanding of what the topic and main content of the article is, but at the same time create enough curiosity to make the user wanting to read more.
 
 \subsubsection{Summary Perspective}
-The summary perspective is located somewhere in between the RSS perspective and the full article perspective or web perspective in the navigational hierarchy. For the users that want a little bit more information than what the RSS perspective can provide, but less than the full article perspective has to offer, it can serve as a replacement for both. It can work well as an entry point to an article and at the same time provide enough information to the user to make it satisfied with the information it has gained from the summary text. 
+The summary perspective is located somewhere in between the RSS perspective and the full article perspective or web perspective in the navigation hierarchy. For the users that want a little bit more information than what the RSS perspective can provide, but less than the full article perspective has to offer, it can serve as a replacement for both. It can work well as an entry point to an article and at the same time provide enough information to the user to make it satisfied with the information it has gained from the summary text. 
 
 It can also serve as an additional level in the navigation hierarchy, between the RSS perspective and the full article perspective or web perspective, to give the user smaller steps between the perspectives and the amount of information presented.
 
@@ -128,16 +128,16 @@ On the other hand, the entity view can serve as a way of getting a quick overvie
 The full article perspective has all the news article's information available, and are usually the last level in the navigation hierarchy. It is the perspective for the most interested users, who wants to have access to all the information an article has to offer, and to be able to read the whole story. This is a perspective primarily used by applications that have legal access to all the content of a story, like the content publishers themselves or third-party developers with special agreements with the content publishers.
 
 \subsubsection{Web Perspective}
-The web perspective serves the same purpose as the full article perspective, to satisfy the most interested users. This perspective are also usually located at the end of the navigation hierarchy, normally linked to from the RSS perspective, or one of the other perspectives that can replace the RSS perspective or work as a middle layer between the RSS perspective and web perspective, like the summary- event- or entity perspective.
+The web perspective serves the same purpose as the full article perspective, to satisfy the most interested users. This perspective are also usually located at the end of the navigation hierarchy, normally linked to from the RSS perspective, or one of the other perspectives that can replace the RSS perspective or work as a middle layer between the RSS perspective and web perspective, like the summary, event, or entity perspective.
 
 
 \subsubsection{Map Perspective}
-The map perspective has two main purposes. It can work as an additional perspective to the full article perspective or web perspective to show the user on a map where an article resides to provide the interested user even more information about the content.
+The map perspective has two main purposes. It can work as an additional perspective to the full article perspective or web perspective to show the user on a map where an article resides, to provide the interested user even more information about the content.
 
 It can also work as an entry point, but this can become a foul experience if not done right and then defeat its purpose. If used as an entry point, it would probably not be of much use to show a lot of articles spread out all over the world on a such small device, and have the user click every map pin to see if this could be an interesting story or not. On the other hand if the device can collect the users location and retrieve news that are nearby with coordinates that are accurate to where the news story concerns, the user can probably have a better understanding of the location, since the user is located nearby and probably knows the area better and can easier relate to the location. Then if a map pin is clicked the user can be brought further down in the navigation hierarchy.
 
 
-\section{Perspectives and their connections in the different apps}
+\section{Perspectives and Their Connections in the Different Apps}
 Following is a simple navigation chart showing how the different perspectives in the different applications are connected.
 
 \subsection{Zite}
@@ -160,7 +160,7 @@ Figure \ref{state_chart_zite} shows that Zite first presents the user with the R
 \label{state_chart_flipboard}
 \end{figure}
 
-Figure \ref{state_chart_flipboard} shows that Flipboard greets the user with a category selection screen. From here the user can select a category that is predefined by the user or search for a topic, which in either way bring the user to the RSS perspective. From the RSS perspective the user can again search for a topic which will navigate to new RSS perspective or click an article an be presented with the full article perspective. From the full article perspective, the user can navigate to the web perspective.
+Figure \ref{state_chart_flipboard} shows that Flipboard greets the user with a category selection screen. From here the user can select a category that is predefined by the user or search for a topic, which in either way brings the user to the RSS perspective. From the RSS perspective the user can again search for a topic which will navigate to new RSS perspective or click an article and be presented with the full article perspective. From the full article perspective, the user can navigate to the web perspective.
 
 \subsection{Pulse}
 
@@ -264,13 +264,13 @@ Feedly starts off by presenting the user with a RSS perspective, as shown in fig
 
 The use case application starts off by presenting the user with an RSS perspective, as shown in figure \ref{state_chart_usecase}, consisting of the latest top story from the recommendation based on the user profile. From here the user can navigate to the category selection screen, and from the start screen or the category selection screen, the user can navigate to the RSS perspective holding articles from the top stories, the category clicked in the category selection screen or by searching for a topic in the start screen. This RSS perspective shows only one article at a time, but by performing a horizontal swipe the user can navigate between the different articles in this category. From this RSS perspective the user can navigate to the full article perspective, which also holds only one article at a time, but to access related stories the user can swipe horizontally. The map perspective, which shows where the article concerns are also accessible from the full article perspective.
 
-\section{How the perspectives are supported on the mobile platform}
+\section{How the Perspectives Are Supported on the Mobile Platform}
 
 Following is a description of how the different perspectives are supported on the mobile platform with regard to which technologies and opportunities they make use of, and how they are realized. This is, as mentioned earlier, from a iOS point of view, but applies to most other smart phones as well, as these technologies or opportunities are widely used on several mobile platforms.
 
 To represent data, the data must be gathered and parsed in some way. News publishers most often gather and create their own data through the work of journalists. Third-party developers creating news applications often start by gathering different RSS feeds and process these further. Either way, mobile news applications need to get their data from somewhere, parse this data and represent it in some way. Raw data transferred over the Internet often is represented by XML or JSON, and parsing this data is the first step for being able to represent any of the perspectives. Some of the mobile operating systems has native support for parsing XML or JSON, and if not, there are numerous external libraries that support this that are easy accessible and free to use.
 
-Further when the data is parsed, a way of representing the data has to found. As all of the major mobile operating systems has native support for displaying text, images, sound and video, there just a matter of how to display it in a usable manner.
+Further when the data is parsed, a way of representing the data has to be found. As all of the major mobile operating systems has native support for displaying text, images, sound and video, there just a matter of how to display it in a usable manner.
 
 All perspectives listed in section \ref{perspectives_presentation}, except the web perspective and map perspective, normally uses parsed raw data, and can be represented as the developer wishes. Also these perspectives normally does not represent the data in any other form than text, image, video or sound, which are all natively supported.
 
